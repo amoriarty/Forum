@@ -30,6 +30,12 @@ class TopicsController: UIViewController, LoginDelegate {
     
     func didLogin() {
         navigationController?.dismiss(animated: true, completion: nil)
+        APIService.shared.getTopics { topics in
+            guard let topics = topics else { return }
+            topics.forEach({ topic in
+                print("\(topic.author.login): \(topic.name)")
+            })
+        }
     }
 }
 

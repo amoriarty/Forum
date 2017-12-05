@@ -42,6 +42,8 @@
 		EC61618D1FD6F70D003D6665 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61618C1FD6F70D003D6665 /* String.swift */; };
 		EC61618F1FD6F9A7003D6665 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61618E1FD6F9A7003D6665 /* APIService.swift */; };
 		EC6161911FD6FCD1003D6665 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161901FD6FCD1003D6665 /* DataService.swift */; };
+		EC6161941FD70A27003D6665 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161931FD70A27003D6665 /* Topic.swift */; };
+		EC6161961FD70A4B003D6665 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161951FD70A4B003D6665 /* Student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		EC61618C1FD6F70D003D6665 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		EC61618E1FD6F9A7003D6665 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		EC6161901FD6FCD1003D6665 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		EC6161931FD70A27003D6665 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		EC6161951FD70A4B003D6665 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */,
 				EC6161871FD6DFF8003D6665 /* Configurations.swift */,
 				EC6161501FD6C149003D6665 /* Controllers */,
+				EC6161921FD70A15003D6665 /* Models */,
 				EC6161891FD6E047003D6665 /* Services */,
 				EC6161531FD6C38C003D6665 /* Toolbox */,
 				EC6161581FD6C884003D6665 /* Fonts */,
@@ -184,6 +189,15 @@
 				EC61618E1FD6F9A7003D6665 /* APIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		EC6161921FD70A15003D6665 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC6161931FD70A27003D6665 /* Topic.swift */,
+				EC6161951FD70A4B003D6665 /* Student.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,11 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6161881FD6DFF8003D6665 /* Configurations.swift in Sources */,
+				EC6161941FD70A27003D6665 /* Topic.swift in Sources */,
 				EC6161411FD6B9D1003D6665 /* TopicsController.swift in Sources */,
 				EC6161521FD6C168003D6665 /* LoginController.swift in Sources */,
 				EC61618D1FD6F70D003D6665 /* String.swift in Sources */,
 				EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */,
 				EC6161911FD6FCD1003D6665 /* DataService.swift in Sources */,
+				EC6161961FD70A4B003D6665 /* Student.swift in Sources */,
 				EC61613F1FD6B9D1003D6665 /* AppDelegate.swift in Sources */,
 				EC61618F1FD6F9A7003D6665 /* APIService.swift in Sources */,
 				EC6161551FD6C3A2003D6665 /* UIView+Constraint.swift in Sources */,
