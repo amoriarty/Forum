@@ -11,7 +11,7 @@ import Foundation
 extension String {
     func matches(pattern: String) -> [String]? {
         guard let regex = try? NSRegularExpression(pattern: pattern) else { return nil }
-        let range = NSRange(location: 0, length: count - 1)
+        let range = NSRange(location: 0, length: count)
         
         return regex.matches(in: self, range: range).flatMap { Range($0.range, in: self).map { String(self[$0]) } }
     }
