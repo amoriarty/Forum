@@ -12,4 +12,5 @@ struct Topic: Decodable {
     let id: Int
     let name: String
     let author: Student
+    let created_at: String
 }

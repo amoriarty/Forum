@@ -44,6 +44,9 @@
 		EC6161911FD6FCD1003D6665 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161901FD6FCD1003D6665 /* DataService.swift */; };
 		EC6161941FD70A27003D6665 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161931FD70A27003D6665 /* Topic.swift */; };
 		EC6161961FD70A4B003D6665 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161951FD70A4B003D6665 /* Student.swift */; };
+		EC6161981FD70DE3003D6665 /* TopicsController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161971FD70DE3003D6665 /* TopicsController+TableView.swift */; };
+		EC61619B1FD70F02003D6665 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61619A1FD70F02003D6665 /* TopicCell.swift */; };
+		EC61619D1FD711BB003D6665 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61619C1FD711BB003D6665 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		EC6161901FD6FCD1003D6665 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		EC6161931FD70A27003D6665 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		EC6161951FD70A4B003D6665 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		EC6161971FD70DE3003D6665 /* TopicsController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicsController+TableView.swift"; sourceTree = "<group>"; };
+		EC61619A1FD70F02003D6665 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
+		EC61619C1FD711BB003D6665 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 				EC6161871FD6DFF8003D6665 /* Configurations.swift */,
 				EC6161501FD6C149003D6665 /* Controllers */,
 				EC6161921FD70A15003D6665 /* Models */,
+				EC6161991FD70EE1003D6665 /* Views */,
 				EC6161891FD6E047003D6665 /* Services */,
 				EC6161531FD6C38C003D6665 /* Toolbox */,
 				EC6161581FD6C884003D6665 /* Fonts */,
@@ -137,6 +144,7 @@
 			children = (
 				EC6161511FD6C168003D6665 /* LoginController.swift */,
 				EC6161401FD6B9D1003D6665 /* TopicsController.swift */,
+				EC6161971FD70DE3003D6665 /* TopicsController+TableView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 				EC6161901FD6FCD1003D6665 /* DataService.swift */,
 				EC61618A1FD6E058003D6665 /* LoginService.swift */,
 				EC61618E1FD6F9A7003D6665 /* APIService.swift */,
+				EC61619C1FD711BB003D6665 /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,6 +207,14 @@
 				EC6161951FD70A4B003D6665 /* Student.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EC6161991FD70EE1003D6665 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC61619A1FD70F02003D6665 /* TopicCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,9 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6161881FD6DFF8003D6665 /* Configurations.swift in Sources */,
+				EC61619D1FD711BB003D6665 /* ImageService.swift in Sources */,
 				EC6161941FD70A27003D6665 /* Topic.swift in Sources */,
 				EC6161411FD6B9D1003D6665 /* TopicsController.swift in Sources */,
 				EC6161521FD6C168003D6665 /* LoginController.swift in Sources */,
+				EC6161981FD70DE3003D6665 /* TopicsController+TableView.swift in Sources */,
 				EC61618D1FD6F70D003D6665 /* String.swift in Sources */,
 				EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */,
 				EC6161911FD6FCD1003D6665 /* DataService.swift in Sources */,
@@ -305,6 +324,7 @@
 				EC61618F1FD6F9A7003D6665 /* APIService.swift in Sources */,
 				EC6161551FD6C3A2003D6665 /* UIView+Constraint.swift in Sources */,
 				EC6161571FD6C607003D6665 /* UIColor.swift in Sources */,
+				EC61619B1FD70F02003D6665 /* TopicCell.swift in Sources */,
 				EC61618B1FD6E058003D6665 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

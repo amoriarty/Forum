@@ -8,13 +8,18 @@
 
 import UIKit
 
-class TopicsController: UIViewController, LoginDelegate {
+class TopicsController: UITableViewController, LoginDelegate {
+    let reuseId = "reuseId"
     let loginController = LoginController()
+    var topics = [Topic]() {
+        didSet { tableView.reloadData() }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         LoginService.shared.delegate = self
+        setupTableView()
         setupNavBar()
         handleLogout()
     }
@@ -32,9 +37,7 @@ class TopicsController: UIViewController, LoginDelegate {
         navigationController?.dismiss(animated: true, completion: nil)
         APIService.shared.getTopics { topics in
             guard let topics = topics else { return }
-            topics.forEach({ topic in
-                print("\(topic.author.login): \(topic.name)")
-            })
+            self.topics = topics
         }
     }
 }

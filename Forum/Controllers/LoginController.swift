@@ -45,13 +45,15 @@ class LoginController: UIViewController {
         view.addSubview(logoImage)
         view.addSubview(loginButton)
         
+        setupLayouts()
+    }
+    
+    private func setupLayouts() {
         _ = background.fill(view)
-        
         _ = logoImage.constraint(dimension: .height, constant: 125)
         _ = logoImage.constraint(.width, to: logoImage, .height)
         _ = logoImage.center(.horizontaly, view)
         _ = logoImage.center(.verticaly, view, multiplier: 0.50)
-        
         _ = loginButton.constraint(dimension: .height, constant: 48)
         _ = loginButton.constraint(dimension: .width, constant: 250)
         _ = loginButton.center(view)

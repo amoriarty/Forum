@@ -10,6 +10,7 @@ import UIKit
 
 extension UIColor {
     static let forumBlue = UIColor(r: 0, g: 186, b: 188)
+    static let forumGray = UIColor(r: 103, g: 103, b: 109)
     
     convenience init(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat = 1) {
         self.init(red: r / 255, green: g / 255, blue: b / 255, alpha: a)

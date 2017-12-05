@@ -11,4 +11,7 @@ import Foundation
 struct Student: Decodable {
     let id: Int
     let login: String
+    var imageUrl: String {
+        return "https://cdn.intra.42.fr/users/medium_\(login).jpg"
+    }
 }
