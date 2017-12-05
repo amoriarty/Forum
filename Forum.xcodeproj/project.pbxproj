@@ -37,6 +37,9 @@
 		EC6161831FD6C8A6003D6665 /* FuturaPTBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61616D1FD6C8A5003D6665 /* FuturaPTBold.otf */; };
 		EC6161841FD6C8A6003D6665 /* FuturaPTBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61616E1FD6C8A5003D6665 /* FuturaPTBook.otf */; };
 		EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161851FD6C8E9003D6665 /* UIFont.swift */; };
+		EC6161881FD6DFF8003D6665 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161871FD6DFF8003D6665 /* Configurations.swift */; };
+		EC61618B1FD6E058003D6665 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61618A1FD6E058003D6665 /* LoginService.swift */; };
+		EC61618D1FD6F70D003D6665 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61618C1FD6F70D003D6665 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		EC61616D1FD6C8A5003D6665 /* FuturaPTBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBold.otf; path = Fonts/FuturaPTBold.otf; sourceTree = SOURCE_ROOT; };
 		EC61616E1FD6C8A5003D6665 /* FuturaPTBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBook.otf; path = Fonts/FuturaPTBook.otf; sourceTree = SOURCE_ROOT; };
 		EC6161851FD6C8E9003D6665 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		EC6161871FD6DFF8003D6665 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		EC61618A1FD6E058003D6665 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		EC61618C1FD6F70D003D6665 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */,
+				EC6161871FD6DFF8003D6665 /* Configurations.swift */,
 				EC6161501FD6C149003D6665 /* Controllers */,
 				EC6161531FD6C38C003D6665 /* Toolbox */,
+				EC6161891FD6E047003D6665 /* Services */,
 				EC6161581FD6C884003D6665 /* Fonts */,
 				EC6161451FD6B9D1003D6665 /* Assets.xcassets */,
 				EC6161471FD6B9D1003D6665 /* LaunchScreen.storyboard */,
@@ -130,6 +138,7 @@
 				EC6161541FD6C3A2003D6665 /* UIView+Constraint.swift */,
 				EC6161561FD6C607003D6665 /* UIColor.swift */,
 				EC6161851FD6C8E9003D6665 /* UIFont.swift */,
+				EC61618C1FD6F70D003D6665 /* String.swift */,
 			);
 			path = Toolbox;
 			sourceTree = "<group>";
@@ -161,6 +170,14 @@
 				EC61616C1FD6C8A5003D6665 /* FuturaPTMediumOblique.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EC6161891FD6E047003D6665 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC61618A1FD6E058003D6665 /* LoginService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,12 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6161881FD6DFF8003D6665 /* Configurations.swift in Sources */,
 				EC6161411FD6B9D1003D6665 /* TopicsController.swift in Sources */,
 				EC6161521FD6C168003D6665 /* LoginController.swift in Sources */,
+				EC61618D1FD6F70D003D6665 /* String.swift in Sources */,
 				EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */,
 				EC61613F1FD6B9D1003D6665 /* AppDelegate.swift in Sources */,
 				EC6161551FD6C3A2003D6665 /* UIView+Constraint.swift in Sources */,
 				EC6161571FD6C607003D6665 /* UIColor.swift in Sources */,
+				EC61618B1FD6E058003D6665 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

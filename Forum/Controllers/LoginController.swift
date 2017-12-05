@@ -29,12 +29,13 @@ class LoginController: UIViewController {
         return imageView
     }()
     
-    let loginButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Sign in", for: .normal)
         button.backgroundColor = .forumBlue
         button.titleLabel?.font = .futuraBook(ofSize: 25.2)
+        button.addTarget(self, action: #selector(handleSignin), for: .touchUpInside)
         return button
     }()
     
@@ -54,5 +55,9 @@ class LoginController: UIViewController {
         _ = loginButton.constraint(dimension: .height, constant: 48)
         _ = loginButton.constraint(dimension: .width, constant: 250)
         _ = loginButton.center(view)
+    }
+    
+    @objc func handleSignin() {
+        LoginService.shared.requestAuthorization()
     }
 }
