@@ -21,10 +21,38 @@ class LoginController: UIViewController {
         return imageView
     }()
     
+    let logoImage: UIImageView = {
+        let image = UIImage(named: "LogoWhite")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    let loginButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Sign in", for: .normal)
+        button.backgroundColor = .forumBlue
+        button.titleLabel?.font = .futuraBook(ofSize: 25.2)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(background)
+        view.addSubview(logoImage)
+        view.addSubview(loginButton)
         
         _ = background.fill(view)
+        
+        _ = logoImage.constraint(dimension: .height, constant: 125)
+        _ = logoImage.constraint(.width, to: logoImage, .height)
+        _ = logoImage.center(.horizontaly, view)
+        _ = logoImage.center(.verticaly, view, multiplier: 0.50)
+        
+        _ = loginButton.constraint(dimension: .height, constant: 48)
+        _ = loginButton.constraint(dimension: .width, constant: 250)
+        _ = loginButton.center(view)
     }
 }
