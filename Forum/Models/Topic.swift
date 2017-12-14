@@ -12,5 +12,10 @@ struct Topic: Decodable {
     let id: Int
     let name: String
     let author: Student
-    let created_at: String
+    let createdAt: String
+    
+    private enum CodingKeys: CodingKey, String {
+        case id, name, author
+        case createdAt = "created_at"
+    }
 }

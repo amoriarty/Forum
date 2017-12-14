@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC20A4591FE24FB700146930 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20A4581FE24FB700146930 /* DateFormatter.swift */; };
 		EC61613F1FD6B9D1003D6665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */; };
 		EC6161411FD6B9D1003D6665 /* TopicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161401FD6B9D1003D6665 /* TopicsController.swift */; };
 		EC6161461FD6B9D1003D6665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6161451FD6B9D1003D6665 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC20A4581FE24FB700146930 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		EC61613B1FD6B9D1003D6665 /* Forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6161401FD6B9D1003D6665 /* TopicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				EC6161561FD6C607003D6665 /* UIColor.swift */,
 				EC6161851FD6C8E9003D6665 /* UIFont.swift */,
 				EC61618C1FD6F70D003D6665 /* String.swift */,
+				EC20A4581FE24FB700146930 /* DateFormatter.swift */,
 			);
 			path = Toolbox;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				EC6161521FD6C168003D6665 /* LoginController.swift in Sources */,
 				EC6161981FD70DE3003D6665 /* TopicsController+TableView.swift in Sources */,
 				EC61618D1FD6F70D003D6665 /* String.swift in Sources */,
+				EC20A4591FE24FB700146930 /* DateFormatter.swift in Sources */,
 				EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */,
 				EC6161911FD6FCD1003D6665 /* DataService.swift in Sources */,
 				EC6161961FD70A4B003D6665 /* Student.swift in Sources */,

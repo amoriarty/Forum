@@ -12,6 +12,7 @@ class TopicCell: UITableViewCell {
     var topic: Topic? {
         didSet {
             guard let topic = topic else { return }
+            guard let createDate = DateFormatter.iso8601.date(from: topic.createdAt) else { return }
             
             let attributedText = NSMutableAttributedString(string: topic.name, attributes: [
                 .font: UIFont.futuraBook(ofSize: 14)
@@ -27,7 +28,7 @@ class TopicCell: UITableViewCell {
                 .foregroundColor: UIColor.forumBlue
             ])
             
-            let attributedDate = NSAttributedString(string: " \(topic.created_at)", attributes: [
+            let attributedDate = NSAttributedString(string: " \(DateFormatter.school.string(from: createDate))", attributes: [
                 .font: UIFont.futuraBook(ofSize: 14),
                 .foregroundColor: UIColor.forumGray
             ])
