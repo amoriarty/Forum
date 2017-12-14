@@ -23,4 +23,13 @@ class APIService {
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         DataService.shared.get(request: request, for: [Topic].self, completion: completion)
     }
+    
+    func getMessage(for topic: Topic, completion: @escaping ([Message]?) -> Void) {
+        guard let token = LoginService.shared.token else { return }
+        guard let url = URL(string: "\(topicUrl)/\(topic.id)/messages") else { return }
+        var request = URLRequest(url: url)
+        
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        DataService.shared.get(request: request, for: [Message].self, completion: completion)
+    }
 }

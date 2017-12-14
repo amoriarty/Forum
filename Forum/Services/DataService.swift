@@ -23,6 +23,8 @@ class DataService {
                 return
             }
             
+            let debug = String(data: data, encoding: .utf8)
+            
             guard let result = try? JSONDecoder().decode(T.self, from: data) else {
                 DispatchQueue.main.async { completion(nil) }
                 return

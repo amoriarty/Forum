@@ -75,11 +75,11 @@ class TopicCell: UITableViewCell {
         _ = userImage.constraint(dimension: .height, constant: 50)
         _ = userImage.constraint(.width, to: userImage, .height)
         _ = userImage.constraint(.leading, to: self, constant: 10)
-        _ = userImage.constraint(.top, to: self, constant: 10)
+        _ = userImage.fill(.verticaly, self, constant: 10)
         
         _ = textView.constraint(.leading, to: userImage, .trailing, constant: 5)
         _ = textView.constraint(.trailing, to: self, constant: 5)
-        _ = textView.constraint(.top, to: self, constant: 10)
+        _ = textView.center(.verticaly, self)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {}
