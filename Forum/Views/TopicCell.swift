@@ -60,7 +60,8 @@ class TopicCell: UITableViewCell {
         textView.isEditable = false
         textView.isSelectable = false
         textView.isScrollEnabled = false
-        textView.textContainerInset = UIEdgeInsets(top: -2, left: -5, bottom: 0, right: -4)
+        textView.textContainerInset = .textViewInsets
+        textView.font = .futuraBook(ofSize: 14)
         return textView
     }()
     
@@ -74,8 +75,8 @@ class TopicCell: UITableViewCell {
     private func setupLayouts() {
         _ = userImage.constraint(dimension: .height, constant: 50)
         _ = userImage.constraint(.width, to: userImage, .height)
-        _ = userImage.constraint(.leading, to: self, constant: 10)
-        _ = userImage.fill(.verticaly, self, constant: 10)
+        _ = userImage.constraint(.leading, to: self, constant: 5)
+        _ = userImage.fill(.verticaly, self, constant: 5)
         
         _ = textView.constraint(.leading, to: userImage, .trailing, constant: 5)
         _ = textView.constraint(.trailing, to: self, constant: 5)

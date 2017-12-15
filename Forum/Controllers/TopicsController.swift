@@ -19,7 +19,10 @@ class TopicsController: UITableViewController, LoginDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        title = "Topics"
+        
         LoginService.shared.delegate = self
+        
         setupTableView()
         setupNavBar()
         handleLogout()
@@ -28,7 +31,7 @@ class TopicsController: UITableViewController, LoginDelegate {
     private func setupTableView() {
         tableView.register(TopicCell.self, forCellReuseIdentifier: reuseId)
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 70
+        tableView.estimatedRowHeight = 60
     }
     
     private func setupNavBar() {

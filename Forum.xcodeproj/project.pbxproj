@@ -12,6 +12,7 @@
 		EC20A45D1FE258F800146930 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20A45C1FE258F800146930 /* MessageCell.swift */; };
 		EC20A45F1FE25C6B00146930 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20A45E1FE25C6B00146930 /* Message.swift */; };
 		EC20A4611FE25E1300146930 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20A4601FE25E1300146930 /* Vote.swift */; };
+		EC20A4631FE3A89F00146930 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20A4621FE3A89F00146930 /* UIEdgeInsets.swift */; };
 		EC61613F1FD6B9D1003D6665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */; };
 		EC6161411FD6B9D1003D6665 /* TopicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161401FD6B9D1003D6665 /* TopicsController.swift */; };
 		EC6161461FD6B9D1003D6665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6161451FD6B9D1003D6665 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		EC20A45C1FE258F800146930 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		EC20A45E1FE25C6B00146930 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		EC20A4601FE25E1300146930 /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
+		EC20A4621FE3A89F00146930 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		EC61613B1FD6B9D1003D6665 /* Forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6161401FD6B9D1003D6665 /* TopicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				EC6161851FD6C8E9003D6665 /* UIFont.swift */,
 				EC61618C1FD6F70D003D6665 /* String.swift */,
 				EC20A4581FE24FB700146930 /* DateFormatter.swift */,
+				EC20A4621FE3A89F00146930 /* UIEdgeInsets.swift */,
 			);
 			path = Toolbox;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				EC61618D1FD6F70D003D6665 /* String.swift in Sources */,
 				EC20A4591FE24FB700146930 /* DateFormatter.swift in Sources */,
 				EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */,
+				EC20A4631FE3A89F00146930 /* UIEdgeInsets.swift in Sources */,
 				EC6161911FD6FCD1003D6665 /* DataService.swift in Sources */,
 				EC20A4611FE25E1300146930 /* Vote.swift in Sources */,
 				EC20A45D1FE258F800146930 /* MessageCell.swift in Sources */,

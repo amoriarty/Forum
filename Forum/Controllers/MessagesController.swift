@@ -18,7 +18,7 @@ class MessagesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseId)
+        tableView.register(MessageCell.self, forCellReuseIdentifier: reuseId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,9 +37,19 @@ class MessagesController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)
-//        let message = messages[indexPath.item]
-//        cell.textLabel?.text = message.content
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! MessageCell
+        let message = messages[indexPath.item]
+        cell.message = message
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let message = messages[indexPath.item]
+        let size = CGSize(width: tableView.frame.width - 65, height: 10000)
+        let attributedContent = NSAttributedString(string: message.content, attributes: [.font: UIFont.futuraBook(ofSize: 14)])
+        let estimatedFrame = attributedContent.boundingRect(with: size, options: .usesLineFragmentOrigin, context: nil)
+        let estimatedHeight = estimatedFrame.height + 30
+        
+        return estimatedHeight > 60 ? estimatedHeight : 60
     }
 }
