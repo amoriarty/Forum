@@ -51,6 +51,7 @@ class TopicCell: UITableViewCell {
         imageView.layer.cornerRadius = 25
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
+        imageView.isUserInteractionEnabled = false
         return imageView
     }()
     
@@ -62,6 +63,7 @@ class TopicCell: UITableViewCell {
         textView.isScrollEnabled = false
         textView.textContainerInset = .textViewInsets
         textView.font = .futuraBook(ofSize: 14)
+        textView.isUserInteractionEnabled = false
         return textView
     }()
     
