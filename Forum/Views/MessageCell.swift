@@ -12,8 +12,10 @@ class MessageCell: UITableViewCell {
     var message: Message? {
         didSet {
             guard let message = message else { return }
+            guard let createDate = DateFormatter.iso8601.date(from: message.createdAt) else { return }
             
             studentLogin.text = message.author.login
+            creationDate.text = DateFormatter.school.string(from: createDate)
             contentText.text = message.content.trimmingCharacters(in: .whitespacesAndNewlines)
             ImageService.shared.getImage(at: message.author.imageUrl) { image in
                 self.studentPicture.image = image
@@ -41,6 +43,15 @@ class MessageCell: UITableViewCell {
         return label
     }()
     
+    let creationDate: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .futura(ofSize: 14)
+        label.textColor = .forumGray
+        
+        return label
+    }()
+    
     let contentText: UITextView = {
         let view = UITextView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -57,6 +68,7 @@ class MessageCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(studentPicture)
         addSubview(studentLogin)
+        addSubview(creationDate)
         addSubview(contentText)
         setupLayouts()
     }
@@ -70,6 +82,10 @@ class MessageCell: UITableViewCell {
         _ = studentLogin.constraint(.top, to: studentPicture)
         _ = studentLogin.constraint(.leading, to: studentPicture, .trailing, constant: 5)
         _ = studentLogin.constraint(dimension: .height, constant: 15)
+        
+        _ = creationDate.constraint(.top, to: studentPicture)
+        _ = creationDate.constraint(.trailing, to: contentText)
+        _ = creationDate.constraint(.height, to: studentLogin)
         
         _ = contentText.constraint(.top, to: studentLogin, .bottom, constant: 5)
         _ = contentText.constraint(.leading, to: studentLogin)
