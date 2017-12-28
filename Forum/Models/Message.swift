@@ -14,10 +14,10 @@ struct Message: Decodable {
     let createdAt: String
     let replies: [Message]
     let votes: Vote
-    
+    let isReply: Bool?
     
     private enum CodingKeys: CodingKey, String {
-        case author, content, replies
+        case author, content, replies, isReply
         case createdAt = "created_at"
         case votes = "votes_count"
     }

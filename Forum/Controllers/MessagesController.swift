@@ -28,8 +28,23 @@ class MessagesController: UITableViewController {
         guard let topic = topic else { return }
         APIService.shared.getMessage(for: topic) { messages in
             guard let messages = messages else { return }
-            self.messages = messages
+            self.setMessages(messages)
         }
+    }
+    
+    func setMessages(_ messages: [Message]) {
+        var final = [Message]()
+        
+        messages.forEach { item in
+            final.append(item)
+            
+            item.replies.forEach({ reply in
+                let toAppend = Message(author: reply.author, content: reply.content, createdAt: reply.createdAt, replies: reply.replies, votes: reply.votes, isReply: true)
+                final.append(toAppend)
+            })
+        }
+        
+        self.messages = final
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

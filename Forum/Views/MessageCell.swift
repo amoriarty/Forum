@@ -18,6 +18,8 @@ class MessageCell: UITableViewCell {
             ImageService.shared.getImage(at: message.author.imageUrl) { image in
                 self.studentPicture.image = image
             }
+            
+            backgroundColor = message.isReply ?? false ? .forumLightGray : .white
         }
     }
     
@@ -47,6 +49,7 @@ class MessageCell: UITableViewCell {
         view.isScrollEnabled = false
         view.textContainerInset = .textViewInsets
         view.font = .futuraBook(ofSize: 14)
+        view.backgroundColor = .clear
         return view
     }()
     
