@@ -12,8 +12,9 @@ protocol PopupDelegate: class {
     func dismissPopup()
 }
 
-class PopupController: UIViewController {
+class PopupController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let animationDuration = 0.5
+    private let reuseId = "reuseId"
     weak var delegate: PopupDelegate?
     private let popupView = PopupView()
     private var constraints = [NSLayoutAttribute: NSLayoutConstraint]()
@@ -35,6 +36,7 @@ class PopupController: UIViewController {
         setupLayouts()
         
         popupView.controller = self
+        popupView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseId)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,5 +73,15 @@ class PopupController: UIViewController {
         }) { _ in
             self.view.removeFromSuperview()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId)!
+        cell.backgroundColor = .purple
+        return cell
     }
 }

@@ -65,9 +65,6 @@ class TopicsController: UITableViewController, LoginDelegate {
     @objc func handleAdd() {
         guard let window = UIApplication.shared.keyWindow else { return }
         window.addSubview(popupController.view)
-        
-//        popupController.modalPresentationStyle = .overCurrentContext
-//        navigationController?.present(popupController, animated: true, completion: nil)
     }
     
     func didLogin() {

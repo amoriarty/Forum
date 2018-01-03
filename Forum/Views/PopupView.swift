@@ -9,23 +9,33 @@
 import UIKit
 
 class PopupView: UIView {
-    weak var controller: PopupController?
+    weak var controller: PopupController? {
+        didSet {
+            tableView.delegate = controller
+            tableView.dataSource = controller
+        }
+    }
     
-    let navigationBar: UINavigationBar = {
+    private let navigationBar: UINavigationBar = {
         let navigationBar = UINavigationBar()
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
+        navigationBar.isTranslucent = false
+        navigationBar.barTintColor = .forumWhite
+        
         let navigationItem = UINavigationItem()
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(handleCancel))
         let addButton = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(handleAdd))
-        navigationBar.translatesAutoresizingMaskIntoConstraints = false
         navigationItem.leftBarButtonItem = cancelButton
         navigationItem.rightBarButtonItem = addButton
         navigationBar.setItems([navigationItem], animated: true)
+        
         return navigationBar
     }()
     
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        
         return tableView
     }()
     
@@ -33,15 +43,19 @@ class PopupView: UIView {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .white
-        layer.cornerRadius = 15
+        layer.cornerRadius = 5
         clipsToBounds = true
         
-        addSubview(navigationBar)
         addSubview(tableView)
+        addSubview(navigationBar)
         setupLayouts()
+        
+        tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+        tableView.scrollIndicatorInsets = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
     }
     
     private func setupLayouts() {
+        _ = tableView.fill(self)
         _ = navigationBar.fill(.horizontaly, self)
         _ = navigationBar.constraint(.top, to: self)
     }
