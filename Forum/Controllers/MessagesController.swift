@@ -10,26 +10,27 @@ import UIKit
 
 class MessagesController: UITableViewController {
     private let reuseId = "reusId"
-    var topic: Topic?
     var messages = [Message]() {
         didSet { tableView.reloadData() }
+    }
+    
+    var topic: Topic? {
+        didSet {
+            messages = []
+    
+            guard let topic = topic else { return }
+            title = topic.name
+            APIService.shared.getMessage(for: topic) { messages in
+                guard let messages = messages else { return }
+                self.setMessages(messages)
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         tableView.register(MessageCell.self, forCellReuseIdentifier: reuseId)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        messages = []
-        
-        guard let topic = topic else { return }
-        APIService.shared.getMessage(for: topic) { messages in
-            guard let messages = messages else { return }
-            self.setMessages(messages)
-        }
     }
     
     func setMessages(_ messages: [Message]) {

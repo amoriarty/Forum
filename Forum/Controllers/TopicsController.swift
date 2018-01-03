@@ -38,6 +38,8 @@ class TopicsController: UITableViewController, LoginDelegate {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAdd))
         navigationItem.leftBarButtonItem = logoutButton
         navigationItem.rightBarButtonItem = addButton
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
