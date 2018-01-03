@@ -16,7 +16,7 @@ extension UIView {
         case width, height
     }
     
-    func fill(_ view: UIView, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> [ NSLayoutAttribute: NSLayoutConstraint ] {
+    func fill(_ view: Any, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> [ NSLayoutAttribute: NSLayoutConstraint ] {
         var result = [ NSLayoutAttribute: NSLayoutConstraint ]()
         
         result.merge(fill(.horizontaly, view, constant: constant, multiplier: multiplier, active: active)) { (current, _) -> NSLayoutConstraint in current }
@@ -24,11 +24,11 @@ extension UIView {
         return result
     }
     
-    func fill(_ type: FillingType, _ view: UIView, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> [ NSLayoutAttribute: NSLayoutConstraint ] {
+    func fill(_ type: FillingType, _ view: Any, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> [ NSLayoutAttribute: NSLayoutConstraint ] {
         return fill(type, view, leading: constant, trailing: constant, multiplier: multiplier, active: active)
     }
     
-    func fill(_ type: FillingType, _ view: UIView, leading: CGFloat, trailing: CGFloat, multiplier: CGFloat = 1, active: Bool = true) -> [ NSLayoutAttribute: NSLayoutConstraint ] {
+    func fill(_ type: FillingType, _ view: Any, leading: CGFloat, trailing: CGFloat, multiplier: CGFloat = 1, active: Bool = true) -> [ NSLayoutAttribute: NSLayoutConstraint ] {
         var result = [ NSLayoutAttribute: NSLayoutConstraint ]()
         
         switch type {
@@ -42,7 +42,7 @@ extension UIView {
         return result
     }
     
-    func center(_ view: UIView, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> [ NSLayoutAttribute: NSLayoutConstraint ] {
+    func center(_ view: Any, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> [ NSLayoutAttribute: NSLayoutConstraint ] {
         var result = [ NSLayoutAttribute: NSLayoutConstraint ]()
         
         result[.centerX] = center(.horizontaly, view, constant: constant, multiplier: multiplier, active: active)
@@ -50,7 +50,7 @@ extension UIView {
         return result
     }
     
-    func center(_ type: FillingType, _ view: UIView, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> NSLayoutConstraint {
+    func center(_ type: FillingType, _ view: Any, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> NSLayoutConstraint {
         switch type {
         case .horizontaly: return constraint(.centerX, to: view, constant: constant, multiplier: multiplier, active: active)
         case .verticaly: return constraint(.centerY, to: view, constant: constant, multiplier: multiplier, active: active)
@@ -68,11 +68,15 @@ extension UIView {
         return constraint
     }
     
-    func constraint(_ attribute: NSLayoutAttribute, to view: UIView, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> NSLayoutConstraint {
+    func constraint(_ attribute: NSLayoutAttribute, to view: Any, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> NSLayoutConstraint {
         return constraint(attribute, to: view, attribute, constant: constant, multiplier: multiplier, active: active)
     }
     
-    func constraint(_ attribute: NSLayoutAttribute, to view: UIView, _ parentAttribute: NSLayoutAttribute, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> NSLayoutConstraint {
+    func constraint(_ attribute: NSLayoutAttribute, to view: Any, _ parentAttribute: NSLayoutAttribute, constant: CGFloat = 0, multiplier: CGFloat = 1, active: Bool = true) -> NSLayoutConstraint {
+        guard view as? UIView != nil || view as? UILayoutGuide != nil else {
+            fatalError("[ALTOOLBOX]: Constraint add to view must be a UIView or a UILayoutGuide.")
+        }
+        
         var inverse: CGFloat {
             switch attribute {
             case .bottom, .trailing, .right: return -1

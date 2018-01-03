@@ -52,6 +52,8 @@
 		EC6161961FD70A4B003D6665 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161951FD70A4B003D6665 /* Student.swift */; };
 		EC61619B1FD70F02003D6665 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61619A1FD70F02003D6665 /* TopicCell.swift */; };
 		EC61619D1FD711BB003D6665 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61619C1FD711BB003D6665 /* ImageService.swift */; };
+		ECCC011A1FFBBE12004D20F3 /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC01191FFBBE12004D20F3 /* PopupController.swift */; };
+		ECCC011C1FFCC383004D20F3 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC011B1FFCC383004D20F3 /* PopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		EC6161951FD70A4B003D6665 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EC61619A1FD70F02003D6665 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		EC61619C1FD711BB003D6665 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		ECCC01191FFBBE12004D20F3 /* PopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
+		ECCC011B1FFCC383004D20F3 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 				EC6161511FD6C168003D6665 /* LoginController.swift */,
 				EC6161401FD6B9D1003D6665 /* TopicsController.swift */,
 				EC20A45A1FE252B700146930 /* MessagesController.swift */,
+				ECCC01191FFBBE12004D20F3 /* PopupController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			children = (
 				EC61619A1FD70F02003D6665 /* TopicCell.swift */,
 				EC20A45C1FE258F800146930 /* MessageCell.swift */,
+				ECCC011B1FFCC383004D20F3 /* PopupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */,
 				EC20A4631FE3A89F00146930 /* UIEdgeInsets.swift in Sources */,
 				EC6161911FD6FCD1003D6665 /* DataService.swift in Sources */,
+				ECCC011A1FFBBE12004D20F3 /* PopupController.swift in Sources */,
 				EC20A4611FE25E1300146930 /* Vote.swift in Sources */,
 				EC20A45D1FE258F800146930 /* MessageCell.swift in Sources */,
 				EC6161961FD70A4B003D6665 /* Student.swift in Sources */,
@@ -346,6 +353,7 @@
 				EC20A45F1FE25C6B00146930 /* Message.swift in Sources */,
 				EC61618B1FD6E058003D6665 /* LoginService.swift in Sources */,
 				EC20A45B1FE252B700146930 /* MessagesController.swift in Sources */,
+				ECCC011C1FFCC383004D20F3 /* PopupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

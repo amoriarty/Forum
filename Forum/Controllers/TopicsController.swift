@@ -12,6 +12,7 @@ class TopicsController: UITableViewController, LoginDelegate {
     private let reuseId = "reuseId"
     private let loginController = LoginController()
     private let messagesController = MessagesController()
+    private let popupController = PopupController()
     private var topics = [Topic]() {
         didSet { tableView.reloadData() }
     }
@@ -20,12 +21,10 @@ class TopicsController: UITableViewController, LoginDelegate {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Topics"
-        
-        LoginService.shared.delegate = self
-        
         setupTableView()
         setupNavBar()
         handleLogout()
+        LoginService.shared.delegate = self
     }
     
     private func setupTableView() {
@@ -36,7 +35,9 @@ class TopicsController: UITableViewController, LoginDelegate {
     
     private func setupNavBar() {
         let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAdd))
         navigationItem.leftBarButtonItem = logoutButton
+        navigationItem.rightBarButtonItem = addButton
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,11 +53,19 @@ class TopicsController: UITableViewController, LoginDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         messagesController.topic = topics[indexPath.item]
-        self.navigationController?.pushViewController(self.messagesController, animated: true)
+        navigationController?.pushViewController(messagesController, animated: true)
     }
     
     @objc func handleLogout() {
         navigationController?.present(loginController, animated: true, completion: nil)
+    }
+    
+    @objc func handleAdd() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        window.addSubview(popupController.view)
+        
+//        popupController.modalPresentationStyle = .overCurrentContext
+//        navigationController?.present(popupController, animated: true, completion: nil)
     }
     
     func didLogin() {
