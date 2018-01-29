@@ -29,8 +29,6 @@ class TopicsController: UITableViewController, LoginDelegate {
     
     private func setupTableView() {
         tableView.register(TopicCell.self, forCellReuseIdentifier: reuseId)
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 60
     }
     
     private func setupNavBar() {
@@ -51,6 +49,14 @@ class TopicsController: UITableViewController, LoginDelegate {
         let topic = topics[indexPath.item]
         cell.topic = topic
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let topic = topics[indexPath.item]
+        
+        let size = CGSize(width: tableView.frame.width - 90, height: 10000)
+        let estimatedFrame = TopicCell.getAttributedText(for: topic).boundingRect(with: size, options: .usesLineFragmentOrigin, context: nil)
+        return estimatedFrame.height > 85 ? estimatedFrame.height : 85
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

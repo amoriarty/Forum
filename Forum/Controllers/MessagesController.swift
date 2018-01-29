@@ -62,9 +62,9 @@ class MessagesController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let message = messages[indexPath.item]
         let size = CGSize(width: tableView.frame.width - 65, height: 10000)
-        let attributedContent = NSAttributedString(string: message.content, attributes: [.font: UIFont.futuraBook(ofSize: 14)])
+        let attributedContent = NSAttributedString(string: message.content, attributes: [.font: UIFont.futuraBook(ofSize: 20)])
         let estimatedFrame = attributedContent.boundingRect(with: size, options: .usesLineFragmentOrigin, context: nil)
-        let estimatedHeight = estimatedFrame.height + 30
+        let estimatedHeight = estimatedFrame.height + 40
         
         return estimatedHeight > 60 ? estimatedHeight : 60
     }

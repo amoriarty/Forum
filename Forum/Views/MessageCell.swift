@@ -38,7 +38,7 @@ class MessageCell: UITableViewCell {
     let studentLogin: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .futuraBold(ofSize: 14)
+        label.font = .futuraBold(ofSize: 20)
         label.textColor = .forumBlue
         return label
     }()
@@ -46,7 +46,7 @@ class MessageCell: UITableViewCell {
     let creationDate: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .futura(ofSize: 14)
+        label.font = .futura(ofSize: 20)
         label.textColor = .forumGray
         
         return label
@@ -59,7 +59,7 @@ class MessageCell: UITableViewCell {
         view.isSelectable = false
         view.isScrollEnabled = false
         view.textContainerInset = .textViewInsets
-        view.font = .futuraBook(ofSize: 14)
+        view.font = .futuraBook(ofSize: 20)
         view.backgroundColor = .clear
         return view
     }()
@@ -81,7 +81,7 @@ class MessageCell: UITableViewCell {
         
         _ = studentLogin.constraint(.top, to: studentPicture)
         _ = studentLogin.constraint(.leading, to: studentPicture, .trailing, constant: 5)
-        _ = studentLogin.constraint(dimension: .height, constant: 15)
+        _ = studentLogin.constraint(dimension: .height, constant: 25)
         
         _ = creationDate.constraint(.top, to: studentPicture)
         _ = creationDate.constraint(.trailing, to: contentText)

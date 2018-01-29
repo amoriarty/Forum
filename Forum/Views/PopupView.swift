@@ -35,7 +35,6 @@ class PopupView: UIView {
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         return tableView
     }()
     
@@ -45,13 +44,9 @@ class PopupView: UIView {
         backgroundColor = .white
         layer.cornerRadius = 5
         clipsToBounds = true
-        
         addSubview(tableView)
         addSubview(navigationBar)
         setupLayouts()
-        
-        tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
-        tableView.scrollIndicatorInsets = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
     }
     
     private func setupLayouts() {

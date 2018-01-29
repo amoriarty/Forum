@@ -18,6 +18,7 @@ class PopupController: UIViewController, UITableViewDelegate, UITableViewDataSou
     weak var delegate: PopupDelegate?
     private let popupView = PopupView()
     private var constraints = [NSLayoutAttribute: NSLayoutConstraint]()
+    private let fields: [String] = ["Message"]
     
     private let background: UIView = {
         let view = UIView()
@@ -30,13 +31,10 @@ class PopupController: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .clear
-        
         view.addSubview(background)
         view.addSubview(popupView)
         setupLayouts()
-        
-        popupView.controller = self
-        popupView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseId)
+        setupPopupView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +57,13 @@ class PopupController: UIViewController, UITableViewDelegate, UITableViewDataSou
         constraints[.bottom] = popupView.constraint(.bottom, to: view, active: false)
     }
     
+    private func setupPopupView() {
+        popupView.controller = self
+        popupView.tableView.register(FieldCell.self, forCellReuseIdentifier: reuseId)
+        popupView.tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+        popupView.tableView.scrollIndicatorInsets = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+    }
+    
     func add() {
         print("add something (func to override)")
     }
@@ -76,12 +81,11 @@ class PopupController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return fields.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId)!
-        cell.backgroundColor = .purple
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId) as! FieldCell
         return cell
     }
 }

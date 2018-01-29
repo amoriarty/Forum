@@ -54,6 +54,7 @@
 		EC61619D1FD711BB003D6665 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61619C1FD711BB003D6665 /* ImageService.swift */; };
 		ECCC011A1FFBBE12004D20F3 /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC01191FFBBE12004D20F3 /* PopupController.swift */; };
 		ECCC011C1FFCC383004D20F3 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC011B1FFCC383004D20F3 /* PopupView.swift */; };
+		ECCC011E1FFD19BF004D20F3 /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		EC61619C1FD711BB003D6665 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		ECCC01191FFBBE12004D20F3 /* PopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
 		ECCC011B1FFCC383004D20F3 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				EC61619A1FD70F02003D6665 /* TopicCell.swift */,
 				EC20A45C1FE258F800146930 /* MessageCell.swift */,
 				ECCC011B1FFCC383004D20F3 /* PopupView.swift */,
+				ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				EC6161411FD6B9D1003D6665 /* TopicsController.swift in Sources */,
 				EC6161521FD6C168003D6665 /* LoginController.swift in Sources */,
 				EC61618D1FD6F70D003D6665 /* String.swift in Sources */,
+				ECCC011E1FFD19BF004D20F3 /* FieldCell.swift in Sources */,
 				EC20A4591FE24FB700146930 /* DateFormatter.swift in Sources */,
 				EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */,
 				EC20A4631FE3A89F00146930 /* UIEdgeInsets.swift in Sources */,
