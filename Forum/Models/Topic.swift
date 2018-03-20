@@ -19,3 +19,22 @@ struct Topic: Decodable {
         case createdAt = "created_at"
     }
 }
+
+struct MessagesAttributes: Encodable {
+    let content: String
+}
+
+struct SendableTopic: Encodable {
+    let name: String
+    let messagesAttributes: MessagesAttributes
+    
+    init(name: String, content: String) {
+        self.name = name
+        self.messagesAttributes = MessagesAttributes(content: content)
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case messagesAttributes = "messages_attributes"
+    }
+}

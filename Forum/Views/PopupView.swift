@@ -9,12 +9,19 @@
 import UIKit
 
 class PopupView: UIView {
+    var tableViewConstaints = [NSLayoutAttribute: NSLayoutConstraint]()
     weak var controller: PopupController? {
         didSet {
             tableView.delegate = controller
             tableView.dataSource = controller
         }
     }
+    
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.tableFooterView = UIView()
+        return tableView
+    }()
     
     private let navigationBar: UINavigationBar = {
         let navigationBar = UINavigationBar()
@@ -32,15 +39,10 @@ class PopupView: UIView {
         return navigationBar
     }()
     
-    let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-    
+    // MARK:- Inits
+    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .white
         layer.cornerRadius = 5
         clipsToBounds = true
@@ -50,20 +52,17 @@ class PopupView: UIView {
     }
     
     private func setupLayouts() {
-        _ = tableView.fill(self)
+        tableViewConstaints = tableView.fill(self)
         _ = navigationBar.fill(.horizontaly, self)
         _ = navigationBar.constraint(.top, to: self)
     }
     
+    // MARK:- Buttons handlers
     @objc func handleCancel() {
         controller?.cancel()
     }
     
     @objc func handleAdd() {
         controller?.add()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

@@ -8,29 +8,44 @@
 
 import UIKit
 
-class FieldCell: UITableViewCell {
+class FieldCell: UITableViewCell, UITextViewDelegate {
     var placeholder: String? {
-        didSet { textField.placeholder = placeholder }
+        didSet { textView.text = placeholder }
     }
     
-    let textField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = .purple
-        textField.font = .futura(ofSize: 25)
-        return textField
+    lazy var textView: UITextView = {
+        let text = UITextView()
+        text.font = .futura(ofSize: 20)
+        text.delegate = self
+        text.textColor = .lightGray
+        return text
     }()
 
+    // MARK:- Inits
+    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(textField)
-        
-        _ = textField.fill(self, constant: 5)
+        addSubview(textView)
+        _ = textView.fill(self, constant: 5)
     }
     
+    // MARK:- Text View Delegate
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        guard textView.text == placeholder else { return }
+        textView.text = ""
+        textView.textColor = .black
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.resignFirstResponder()
+        
+        guard textView.text == "" else { return }
+        textView.text = placeholder
+        textView.textColor = .lightGray
+    }
+    
+    // MARK:- Table View Cell Delegate
+    /* Shutting down this two function */
     override func setSelected(_ selected: Bool, animated: Bool) {}
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }

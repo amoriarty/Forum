@@ -17,6 +17,7 @@ class TopicsController: UITableViewController, LoginDelegate {
         didSet { tableView.reloadData() }
     }
     
+    // MARK:- View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -27,8 +28,11 @@ class TopicsController: UITableViewController, LoginDelegate {
         LoginService.shared.delegate = self
     }
     
+    // MARK:- Setups
     private func setupTableView() {
         tableView.register(TopicCell.self, forCellReuseIdentifier: reuseId)
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
     }
     
     private func setupNavBar() {
@@ -40,6 +44,7 @@ class TopicsController: UITableViewController, LoginDelegate {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    // MARK:- Table View Delegate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return topics.count
     }
@@ -64,6 +69,7 @@ class TopicsController: UITableViewController, LoginDelegate {
         navigationController?.pushViewController(messagesController, animated: true)
     }
     
+    // MARK:- Buttons handler
     @objc func handleLogout() {
         navigationController?.present(loginController, animated: true, completion: nil)
     }
@@ -73,12 +79,19 @@ class TopicsController: UITableViewController, LoginDelegate {
         window.addSubview(popupController.view)
     }
     
-    func didLogin() {
-        navigationController?.dismiss(animated: true, completion: nil)
-        APIService.shared.getTopics { topics in
+    // MARK:- Refresh handler
+    @objc func handleRefresh() {
+        APIService.shared.getTopics { [unowned self] topics in
             guard let topics = topics else { return }
             self.topics = topics
+            self.refreshControl?.endRefreshing()
         }
+    }
+    
+    // MARK:- Login Delegate
+    func didLogin() {
+        navigationController?.dismiss(animated: true, completion: nil)
+        handleRefresh()
     }
 }
 

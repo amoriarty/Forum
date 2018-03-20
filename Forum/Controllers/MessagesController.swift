@@ -20,19 +20,26 @@ class MessagesController: UITableViewController {
     
             guard let topic = topic else { return }
             title = topic.name
-            APIService.shared.getMessage(for: topic) { messages in
-                guard let messages = messages else { return }
-                self.setMessages(messages)
-            }
+            handleRefresh()
         }
     }
     
+    // MARK:- View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         tableView.register(MessageCell.self, forCellReuseIdentifier: reuseId)
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
     }
     
+    private func setupNavBar() {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAdd))
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
+    // MARK:- Controller logics
+    /* Will look for all reply and will integrate it into one array */
     func setMessages(_ messages: [Message]) {
         var final = [Message]()
         
@@ -48,6 +55,20 @@ class MessagesController: UITableViewController {
         self.messages = final
     }
     
+    @objc func handleRefresh() {
+        guard let topic = topic else { return }
+        APIService.shared.getMessage(for: topic) { [unowned self] messages in
+            guard let messages = messages else { return }
+            self.setMessages(messages)
+            self.refreshControl?.endRefreshing()
+        }
+    }
+    
+    @objc func handleAdd() {
+        // TODO: Implement PopController.
+    }
+    
+    // MARK:- Table View Delegate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }

@@ -32,4 +32,8 @@ class APIService {
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         DataService.shared.get(request: request, for: [Message].self, completion: completion)
     }
+    
+    func add(topic sendable: SendableTopic) {
+        // TODO: Implement POST topic to API.
+    }
 }
