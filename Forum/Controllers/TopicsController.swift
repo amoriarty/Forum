@@ -12,7 +12,7 @@ class TopicsController: UITableViewController, LoginDelegate {
     private let reuseId = "reuseId"
     private let loginController = LoginController()
     private let messagesController = MessagesController()
-    private let popupController = PopupController()
+    private let popupController = AddTopicController()
     private var topics = [Topic]() {
         didSet { tableView.reloadData() }
     }

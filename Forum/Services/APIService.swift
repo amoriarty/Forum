@@ -33,7 +33,27 @@ class APIService {
         DataService.shared.get(request: request, for: [Message].self, completion: completion)
     }
     
-    func add(topic sendable: SendableTopic) {
+    func add(topic name: String, message: String) {
         // TODO: Implement POST topic to API.
+    }
+    
+    func add(message: String, to topic: Int) {
+        // TODO: Implement POST message to API
+    }
+    
+    func update(topic: Int, with name: String) {
+        // TODO: Implement PATCH topic
+    }
+    
+    func update(message: Int, with content: String) {
+        // TODO: Implement PATCH message
+    }
+    
+    func remove(topic: Int) {
+        // TODO: Implement DELETE Topic
+    }
+    
+    func remove(message: Int) {
+        // TODO: Implement DELETE message
     }
 }

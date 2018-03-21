@@ -55,6 +55,8 @@
 		ECCC011A1FFBBE12004D20F3 /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC01191FFBBE12004D20F3 /* PopupController.swift */; };
 		ECCC011C1FFCC383004D20F3 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC011B1FFCC383004D20F3 /* PopupView.swift */; };
 		ECCC011E1FFD19BF004D20F3 /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */; };
+		ECE0C46020626A11007FB15B /* AddTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C45F20626A11007FB15B /* AddTopicController.swift */; };
+		ECE0C46220626C20007FB15B /* AddMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C46120626C20007FB15B /* AddMessageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,8 @@
 		ECCC01191FFBBE12004D20F3 /* PopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
 		ECCC011B1FFCC383004D20F3 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
+		ECE0C45F20626A11007FB15B /* AddTopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTopicController.swift; sourceTree = "<group>"; };
+		ECE0C46120626C20007FB15B /* AddMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 				EC6161401FD6B9D1003D6665 /* TopicsController.swift */,
 				EC20A45A1FE252B700146930 /* MessagesController.swift */,
 				ECCC01191FFBBE12004D20F3 /* PopupController.swift */,
+				ECE0C45F20626A11007FB15B /* AddTopicController.swift */,
+				ECE0C46120626C20007FB15B /* AddMessageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -345,6 +351,8 @@
 				EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */,
 				EC20A4631FE3A89F00146930 /* UIEdgeInsets.swift in Sources */,
 				EC6161911FD6FCD1003D6665 /* DataService.swift in Sources */,
+				ECE0C46220626C20007FB15B /* AddMessageController.swift in Sources */,
+				ECE0C46020626A11007FB15B /* AddTopicController.swift in Sources */,
 				ECCC011A1FFBBE12004D20F3 /* PopupController.swift in Sources */,
 				EC20A4611FE25E1300146930 /* Vote.swift in Sources */,
 				EC20A45D1FE258F800146930 /* MessageCell.swift in Sources */,

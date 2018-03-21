@@ -10,16 +10,17 @@ import UIKit
 
 class MessagesController: UITableViewController {
     private let reuseId = "reusId"
+    private let popupController = AddMessageController()
     var messages = [Message]() {
         didSet { tableView.reloadData() }
     }
     
     var topic: Topic? {
+        willSet { messages = [] }
         didSet {
-            messages = []
-    
             guard let topic = topic else { return }
             title = topic.name
+            popupController.topic = topic
             handleRefresh()
         }
     }
@@ -29,11 +30,12 @@ class MessagesController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         tableView.register(MessageCell.self, forCellReuseIdentifier: reuseId)
+        
+        /* Refresh Control */
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
-    }
-    
-    private func setupNavBar() {
+        
+        /* Adding add button */
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAdd))
         navigationItem.rightBarButtonItem = addButton
     }
@@ -43,13 +45,13 @@ class MessagesController: UITableViewController {
     func setMessages(_ messages: [Message]) {
         var final = [Message]()
         
-        messages.forEach { item in
-            final.append(item)
+        messages.forEach {
+            final.append($0)
             
-            item.replies.forEach({ reply in
-                let toAppend = Message(author: reply.author, content: reply.content, createdAt: reply.createdAt, replies: reply.replies, votes: reply.votes, isReply: true)
-                final.append(toAppend)
-            })
+            $0.replies.forEach {
+                let reply = Message(author: $0.author, content: $0.content, createdAt: $0.createdAt, replies: $0.replies, votes: $0.votes, isReply: true)
+                final.append(reply)
+            }
         }
         
         self.messages = final
@@ -65,7 +67,8 @@ class MessagesController: UITableViewController {
     }
     
     @objc func handleAdd() {
-        // TODO: Implement PopController.
+        guard let window = UIApplication.shared.keyWindow else { return }
+        window.addSubview(popupController.view)
     }
     
     // MARK:- Table View Delegate

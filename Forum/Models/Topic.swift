@@ -20,13 +20,13 @@ struct Topic: Decodable {
     }
 }
 
-struct MessagesAttributes: Encodable {
-    let content: String
-}
-
 struct SendableTopic: Encodable {
     let name: String
     let messagesAttributes: MessagesAttributes
+    
+    struct MessagesAttributes: Encodable {
+        let content: String
+    }
     
     init(name: String, content: String) {
         self.name = name
