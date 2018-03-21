@@ -72,15 +72,39 @@ class TopicsController: UITableViewController, LoginDelegate {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let topic = topics[indexPath.item]
         
-        guard let user = LoginService.shared.user, topic.author.id == user.id else { return nil }
-        
         let delete = UIContextualAction(style: .destructive, title: "Delete") { [unowned self] _, _, _ in
             guard let index = self.topics.index(where: { $0 == topic }) else { return }
+            guard let user = LoginService.shared.user, topic.author.id == user.id else {
+                let controller = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+                let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+                    controller.dismiss(animated: true, completion: nil)
+                })
+                
+                controller.title = "Unauthorized"
+                controller.message = "Topic doesn't belongs to you."
+                controller.addAction(cancel)
+                self.navigationController?.present(controller, animated: true, completion: nil)
+                return
+            }
+            
             APIService.shared.remove(topic: topic.id)
             self.topics.remove(at: index)
         }
         
         let edit = UIContextualAction(style: .normal, title: "Edit") { [unowned self] _, _, _ in
+            guard let user = LoginService.shared.user, topic.author.id == user.id else {
+                let controller = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+                let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+                    controller.dismiss(animated: true, completion: nil)
+                })
+                
+                controller.title = "Unauthorized"
+                controller.message = "Topic doesn't belongs to you."
+                controller.addAction(cancel)
+                self.navigationController?.present(controller, animated: true, completion: nil)
+                return
+            }
+            
             let controller = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
                 controller.dismiss(animated: true, completion: nil)

@@ -58,6 +58,7 @@
 		ECE0C46020626A11007FB15B /* AddTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C45F20626A11007FB15B /* AddTopicController.swift */; };
 		ECE0C46220626C20007FB15B /* AddMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C46120626C20007FB15B /* AddMessageController.swift */; };
 		ECE0C46420627A81007FB15B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C46320627A81007FB15B /* Constants.swift */; };
+		ECE0C46820628651007FB15B /* EditMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C46720628651007FB15B /* EditMessageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		ECE0C45F20626A11007FB15B /* AddTopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTopicController.swift; sourceTree = "<group>"; };
 		ECE0C46120626C20007FB15B /* AddMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessageController.swift; sourceTree = "<group>"; };
 		ECE0C46320627A81007FB15B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ECE0C46720628651007FB15B /* EditMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMessageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				ECCC01191FFBBE12004D20F3 /* PopupController.swift */,
 				ECE0C45F20626A11007FB15B /* AddTopicController.swift */,
 				ECE0C46120626C20007FB15B /* AddMessageController.swift */,
+				ECE0C46720628651007FB15B /* EditMessageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				EC61618F1FD6F9A7003D6665 /* APIService.swift in Sources */,
 				EC6161551FD6C3A2003D6665 /* UIView+Constraint.swift in Sources */,
 				EC6161571FD6C607003D6665 /* UIColor.swift in Sources */,
+				ECE0C46820628651007FB15B /* EditMessageController.swift in Sources */,
 				EC61619B1FD70F02003D6665 /* TopicCell.swift in Sources */,
 				EC20A45F1FE25C6B00146930 /* Message.swift in Sources */,
 				EC61618B1FD6E058003D6665 /* LoginService.swift in Sources */,
