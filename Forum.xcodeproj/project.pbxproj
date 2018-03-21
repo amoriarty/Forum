@@ -57,6 +57,7 @@
 		ECCC011E1FFD19BF004D20F3 /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */; };
 		ECE0C46020626A11007FB15B /* AddTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C45F20626A11007FB15B /* AddTopicController.swift */; };
 		ECE0C46220626C20007FB15B /* AddMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C46120626C20007FB15B /* AddMessageController.swift */; };
+		ECE0C46420627A81007FB15B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0C46320627A81007FB15B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
 		ECE0C45F20626A11007FB15B /* AddTopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTopicController.swift; sourceTree = "<group>"; };
 		ECE0C46120626C20007FB15B /* AddMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessageController.swift; sourceTree = "<group>"; };
+		ECE0C46320627A81007FB15B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */,
 				EC6161871FD6DFF8003D6665 /* Configurations.swift */,
+				ECE0C46320627A81007FB15B /* Constants.swift */,
 				EC6161501FD6C149003D6665 /* Controllers */,
 				EC6161921FD70A15003D6665 /* Models */,
 				EC6161991FD70EE1003D6665 /* Views */,
@@ -366,6 +369,7 @@
 				EC61618B1FD6E058003D6665 /* LoginService.swift in Sources */,
 				EC20A45B1FE252B700146930 /* MessagesController.swift in Sources */,
 				ECCC011C1FFCC383004D20F3 /* PopupView.swift in Sources */,
+				ECE0C46420627A81007FB15B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

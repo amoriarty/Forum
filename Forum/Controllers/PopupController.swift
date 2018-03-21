@@ -20,6 +20,11 @@ class PopupController: UIViewController, UITableViewDelegate, UITableViewDataSou
     let popupView = PopupView()
     var fields: [String] { return [] }
     
+    enum ButtonEmplacement {
+        case left
+        case right
+    }
+    
     private let background: UIView = {
         let view = UIView()
         view.backgroundColor = .black

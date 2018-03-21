@@ -26,6 +26,7 @@ class LoginService {
     private var authorization: String?
     weak var delegate: LoginDelegate?
     var token: String?
+    var user: Student?
     
     var isLogin: Bool {
         return token != nil
@@ -56,10 +57,14 @@ class LoginService {
         
         request.httpMethod = "POST"
         request.httpBody = body.data(using: .utf8)
-        DataService.shared.get(request: request, for: TokenResponse.self) { response in
+        DataService.shared.get(request: request, for: TokenResponse.self) { [unowned self] response in
             guard let response = response else { return }
             self.token = response.token
-            self.delegate?.didLogin()
+            APIService.shared.getUser(completion: { [unowned self] student in
+                guard let student = student else { return }
+                self.user = student
+                self.delegate?.didLogin()
+            })
         }
     }
 }

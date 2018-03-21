@@ -18,6 +18,10 @@ struct Topic: Decodable {
         case id, name, author
         case createdAt = "created_at"
     }
+    
+    static func ==(_ left: Topic, _ right: Topic) -> Bool {
+        return left.id == right.id
+    }
 }
 
 struct SendableTopic: Encodable {

@@ -12,7 +12,7 @@ class TopicsController: UITableViewController, LoginDelegate {
     private let reuseId = "reuseId"
     private let loginController = LoginController()
     private let messagesController = MessagesController()
-    private let popupController = AddTopicController()
+    private let addController = AddTopicController()
     private var topics = [Topic]() {
         didSet { tableView.reloadData() }
     }
@@ -69,6 +69,43 @@ class TopicsController: UITableViewController, LoginDelegate {
         navigationController?.pushViewController(messagesController, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let topic = topics[indexPath.item]
+        
+        guard let user = LoginService.shared.user, topic.author.id == user.id else { return nil }
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { [unowned self] _, _, _ in
+            guard let index = self.topics.index(where: { $0 == topic }) else { return }
+            APIService.shared.remove(topic: topic.id)
+            self.topics.remove(at: index)
+        }
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") { [unowned self] _, _, _ in
+            let controller = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+                controller.dismiss(animated: true, completion: nil)
+            })
+            
+            let save = UIAlertAction(title: "Save", style: .default, handler: { _ in
+                guard let textField = controller.textFields?.first else { return }
+                guard let text = textField.text, text.count > 0 else { return }
+                APIService.shared.update(topic: topic.id, with: text)
+            })
+            
+            controller.title = "Edit Topic"
+            controller.message = "Set a new title for your topic."
+            controller.addAction(cancel)
+            controller.addAction(save)
+            controller.addTextField(configurationHandler: { textField in
+                textField.placeholder = topic.name
+            })
+            
+            self.navigationController?.present(controller, animated: true, completion: nil)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [delete, edit])
+    }
+    
     // MARK:- Buttons handler
     @objc func handleLogout() {
         navigationController?.present(loginController, animated: true, completion: nil)
@@ -76,7 +113,7 @@ class TopicsController: UITableViewController, LoginDelegate {
     
     @objc func handleAdd() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        window.addSubview(popupController.view)
+        window.addSubview(addController.view)
     }
     
     // MARK:- Refresh handler

@@ -10,9 +10,21 @@ import Foundation
 
 class APIService {
     static let shared = APIService()
-    private let apiUrl = "https://api.intra.42.fr"
     private var topicUrl: String {
-      return "\(apiUrl)/v2/topics"
+      return "\(API_URL)/topics"
+    }
+    
+    private var userUrl: String {
+        return "\(API_URL)/users"
+    }
+    
+    func getUser(_ user: String = "me", completion: @escaping (Student?) -> Void) {
+        guard let token = LoginService.shared.token else { return }
+        guard let url = URL(string: "\(userUrl)/\(user)") else { return }
+        var request = URLRequest(url: url)
+        
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        DataService.shared.get(request: request, for: Student.self, completion: completion)
     }
     
     func getTopics(completion: @escaping ([Topic]?) -> Void) {
