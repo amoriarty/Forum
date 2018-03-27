@@ -20,30 +20,7 @@
 		EC6161521FD6C168003D6665 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161511FD6C168003D6665 /* LoginController.swift */; };
 		EC6161551FD6C3A2003D6665 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161541FD6C3A2003D6665 /* UIView+Constraint.swift */; };
 		EC6161571FD6C607003D6665 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161561FD6C607003D6665 /* UIColor.swift */; };
-		EC61616F1FD6C8A5003D6665 /* FuturaPTBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161591FD6C8A4003D6665 /* FuturaPTBoldOblique.otf */; };
-		EC6161701FD6C8A5003D6665 /* FuturaPTDemi.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61615A1FD6C8A4003D6665 /* FuturaPTDemi.otf */; };
-		EC6161711FD6C8A5003D6665 /* FuturaPTExtraBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61615B1FD6C8A4003D6665 /* FuturaPTExtraBoldOblique.otf */; };
-		EC6161721FD6C8A5003D6665 /* FuturaPTCondBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61615C1FD6C8A4003D6665 /* FuturaPTCondBold.otf */; };
-		EC6161731FD6C8A5003D6665 /* FuturaPTCondExtraBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61615D1FD6C8A4003D6665 /* FuturaPTCondExtraBoldOblique.otf */; };
-		EC6161741FD6C8A5003D6665 /* FuturaPTCondMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61615E1FD6C8A4003D6665 /* FuturaPTCondMedium.otf */; };
-		EC6161751FD6C8A6003D6665 /* FuturaPTHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61615F1FD6C8A4003D6665 /* FuturaPTHeavy.otf */; };
-		EC6161761FD6C8A6003D6665 /* FuturaPTCondBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161601FD6C8A4003D6665 /* FuturaPTCondBook.otf */; };
-		EC6161771FD6C8A6003D6665 /* FuturaPTCondBookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161611FD6C8A4003D6665 /* FuturaPTCondBookOblique.otf */; };
-		EC6161781FD6C8A6003D6665 /* FuturaPTExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161621FD6C8A4003D6665 /* FuturaPTExtraBold.otf */; };
-		EC6161791FD6C8A6003D6665 /* FuturaPTCondBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161631FD6C8A5003D6665 /* FuturaPTCondBoldOblique.otf */; };
-		EC61617A1FD6C8A6003D6665 /* FuturaPTMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161641FD6C8A5003D6665 /* FuturaPTMedium.otf */; };
-		EC61617B1FD6C8A6003D6665 /* FuturaPTCondMediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161651FD6C8A5003D6665 /* FuturaPTCondMediumOblique.otf */; };
-		EC61617C1FD6C8A6003D6665 /* FuturaPTDemiOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161661FD6C8A5003D6665 /* FuturaPTDemiOblique.otf */; };
-		EC61617D1FD6C8A6003D6665 /* FuturaPTLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161671FD6C8A5003D6665 /* FuturaPTLight.otf */; };
-		EC61617E1FD6C8A6003D6665 /* FuturaPTLightOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161681FD6C8A5003D6665 /* FuturaPTLightOblique.otf */; };
-		EC61617F1FD6C8A6003D6665 /* FuturaPTBookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC6161691FD6C8A5003D6665 /* FuturaPTBookOblique.otf */; };
-		EC6161801FD6C8A6003D6665 /* FuturaPTCondExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61616A1FD6C8A5003D6665 /* FuturaPTCondExtraBold.otf */; };
-		EC6161811FD6C8A6003D6665 /* FuturaPTHeavyOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61616B1FD6C8A5003D6665 /* FuturaPTHeavyOblique.otf */; };
-		EC6161821FD6C8A6003D6665 /* FuturaPTMediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61616C1FD6C8A5003D6665 /* FuturaPTMediumOblique.otf */; };
-		EC6161831FD6C8A6003D6665 /* FuturaPTBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61616D1FD6C8A5003D6665 /* FuturaPTBold.otf */; };
-		EC6161841FD6C8A6003D6665 /* FuturaPTBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC61616E1FD6C8A5003D6665 /* FuturaPTBook.otf */; };
 		EC6161861FD6C8E9003D6665 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161851FD6C8E9003D6665 /* UIFont.swift */; };
-		EC6161881FD6DFF8003D6665 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161871FD6DFF8003D6665 /* Configurations.swift */; };
 		EC61618B1FD6E058003D6665 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61618A1FD6E058003D6665 /* LoginService.swift */; };
 		EC61618D1FD6F70D003D6665 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61618C1FD6F70D003D6665 /* String.swift */; };
 		EC61618F1FD6F9A7003D6665 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61618E1FD6F9A7003D6665 /* APIService.swift */; };
@@ -52,6 +29,29 @@
 		EC6161961FD70A4B003D6665 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6161951FD70A4B003D6665 /* Student.swift */; };
 		EC61619B1FD70F02003D6665 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61619A1FD70F02003D6665 /* TopicCell.swift */; };
 		EC61619D1FD711BB003D6665 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC61619C1FD711BB003D6665 /* ImageService.swift */; };
+		ECB08970206A4DEA00D40BBE /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB0896F206A4DEA00D40BBE /* Configurations.swift */; };
+		ECB08989206A4E4200D40BBE /* FuturaPTLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08973206A4E4000D40BBE /* FuturaPTLight.otf */; };
+		ECB0898A206A4E4200D40BBE /* FuturaPTMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08974206A4E4000D40BBE /* FuturaPTMedium.otf */; };
+		ECB0898B206A4E4200D40BBE /* FuturaPTCondBookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08975206A4E4000D40BBE /* FuturaPTCondBookOblique.otf */; };
+		ECB0898C206A4E4200D40BBE /* FuturaPTCondBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08976206A4E4100D40BBE /* FuturaPTCondBoldOblique.otf */; };
+		ECB0898D206A4E4200D40BBE /* FuturaPTBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08977206A4E4100D40BBE /* FuturaPTBoldOblique.otf */; };
+		ECB0898E206A4E4200D40BBE /* FuturaPTCondMediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08978206A4E4100D40BBE /* FuturaPTCondMediumOblique.otf */; };
+		ECB0898F206A4E4200D40BBE /* FuturaPTDemi.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08979206A4E4100D40BBE /* FuturaPTDemi.otf */; };
+		ECB08990206A4E4200D40BBE /* FuturaPTLightOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB0897A206A4E4100D40BBE /* FuturaPTLightOblique.otf */; };
+		ECB08991206A4E4200D40BBE /* FuturaPTCondMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB0897B206A4E4100D40BBE /* FuturaPTCondMedium.otf */; };
+		ECB08992206A4E4200D40BBE /* FuturaPTBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB0897C206A4E4100D40BBE /* FuturaPTBook.otf */; };
+		ECB08993206A4E4200D40BBE /* FuturaPTCondBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB0897D206A4E4100D40BBE /* FuturaPTCondBold.otf */; };
+		ECB08994206A4E4200D40BBE /* FuturaPTCondExtraBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB0897E206A4E4100D40BBE /* FuturaPTCondExtraBoldOblique.otf */; };
+		ECB08995206A4E4200D40BBE /* FuturaPTCondExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB0897F206A4E4100D40BBE /* FuturaPTCondExtraBold.otf */; };
+		ECB08996206A4E4200D40BBE /* FuturaPTCondBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08980206A4E4100D40BBE /* FuturaPTCondBook.otf */; };
+		ECB08997206A4E4200D40BBE /* FuturaPTBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08981206A4E4100D40BBE /* FuturaPTBold.otf */; };
+		ECB08998206A4E4200D40BBE /* FuturaPTExtraBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08982206A4E4100D40BBE /* FuturaPTExtraBoldOblique.otf */; };
+		ECB08999206A4E4200D40BBE /* FuturaPTMediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08983206A4E4100D40BBE /* FuturaPTMediumOblique.otf */; };
+		ECB0899A206A4E4200D40BBE /* FuturaPTExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08984206A4E4100D40BBE /* FuturaPTExtraBold.otf */; };
+		ECB0899B206A4E4200D40BBE /* FuturaPTBookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08985206A4E4100D40BBE /* FuturaPTBookOblique.otf */; };
+		ECB0899C206A4E4200D40BBE /* FuturaPTDemiOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08986206A4E4100D40BBE /* FuturaPTDemiOblique.otf */; };
+		ECB0899D206A4E4200D40BBE /* FuturaPTHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08987206A4E4200D40BBE /* FuturaPTHeavy.otf */; };
+		ECB0899E206A4E4200D40BBE /* FuturaPTHeavyOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECB08988206A4E4200D40BBE /* FuturaPTHeavyOblique.otf */; };
 		ECCC011A1FFBBE12004D20F3 /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC01191FFBBE12004D20F3 /* PopupController.swift */; };
 		ECCC011C1FFCC383004D20F3 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC011B1FFCC383004D20F3 /* PopupView.swift */; };
 		ECCC011E1FFD19BF004D20F3 /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */; };
@@ -77,30 +77,7 @@
 		EC6161511FD6C168003D6665 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EC6161541FD6C3A2003D6665 /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
 		EC6161561FD6C607003D6665 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		EC6161591FD6C8A4003D6665 /* FuturaPTBoldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBoldOblique.otf; path = Fonts/FuturaPTBoldOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC61615A1FD6C8A4003D6665 /* FuturaPTDemi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTDemi.otf; path = Fonts/FuturaPTDemi.otf; sourceTree = SOURCE_ROOT; };
-		EC61615B1FD6C8A4003D6665 /* FuturaPTExtraBoldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTExtraBoldOblique.otf; path = Fonts/FuturaPTExtraBoldOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC61615C1FD6C8A4003D6665 /* FuturaPTCondBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondBold.otf; path = Fonts/FuturaPTCondBold.otf; sourceTree = SOURCE_ROOT; };
-		EC61615D1FD6C8A4003D6665 /* FuturaPTCondExtraBoldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondExtraBoldOblique.otf; path = Fonts/FuturaPTCondExtraBoldOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC61615E1FD6C8A4003D6665 /* FuturaPTCondMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondMedium.otf; path = Fonts/FuturaPTCondMedium.otf; sourceTree = SOURCE_ROOT; };
-		EC61615F1FD6C8A4003D6665 /* FuturaPTHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTHeavy.otf; path = Fonts/FuturaPTHeavy.otf; sourceTree = SOURCE_ROOT; };
-		EC6161601FD6C8A4003D6665 /* FuturaPTCondBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondBook.otf; path = Fonts/FuturaPTCondBook.otf; sourceTree = SOURCE_ROOT; };
-		EC6161611FD6C8A4003D6665 /* FuturaPTCondBookOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondBookOblique.otf; path = Fonts/FuturaPTCondBookOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC6161621FD6C8A4003D6665 /* FuturaPTExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTExtraBold.otf; path = Fonts/FuturaPTExtraBold.otf; sourceTree = SOURCE_ROOT; };
-		EC6161631FD6C8A5003D6665 /* FuturaPTCondBoldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondBoldOblique.otf; path = Fonts/FuturaPTCondBoldOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC6161641FD6C8A5003D6665 /* FuturaPTMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTMedium.otf; path = Fonts/FuturaPTMedium.otf; sourceTree = SOURCE_ROOT; };
-		EC6161651FD6C8A5003D6665 /* FuturaPTCondMediumOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondMediumOblique.otf; path = Fonts/FuturaPTCondMediumOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC6161661FD6C8A5003D6665 /* FuturaPTDemiOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTDemiOblique.otf; path = Fonts/FuturaPTDemiOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC6161671FD6C8A5003D6665 /* FuturaPTLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTLight.otf; path = Fonts/FuturaPTLight.otf; sourceTree = SOURCE_ROOT; };
-		EC6161681FD6C8A5003D6665 /* FuturaPTLightOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTLightOblique.otf; path = Fonts/FuturaPTLightOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC6161691FD6C8A5003D6665 /* FuturaPTBookOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBookOblique.otf; path = Fonts/FuturaPTBookOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC61616A1FD6C8A5003D6665 /* FuturaPTCondExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondExtraBold.otf; path = Fonts/FuturaPTCondExtraBold.otf; sourceTree = SOURCE_ROOT; };
-		EC61616B1FD6C8A5003D6665 /* FuturaPTHeavyOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTHeavyOblique.otf; path = Fonts/FuturaPTHeavyOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC61616C1FD6C8A5003D6665 /* FuturaPTMediumOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTMediumOblique.otf; path = Fonts/FuturaPTMediumOblique.otf; sourceTree = SOURCE_ROOT; };
-		EC61616D1FD6C8A5003D6665 /* FuturaPTBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBold.otf; path = Fonts/FuturaPTBold.otf; sourceTree = SOURCE_ROOT; };
-		EC61616E1FD6C8A5003D6665 /* FuturaPTBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBook.otf; path = Fonts/FuturaPTBook.otf; sourceTree = SOURCE_ROOT; };
 		EC6161851FD6C8E9003D6665 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
-		EC6161871FD6DFF8003D6665 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		EC61618A1FD6E058003D6665 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		EC61618C1FD6F70D003D6665 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		EC61618E1FD6F9A7003D6665 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -109,6 +86,29 @@
 		EC6161951FD70A4B003D6665 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EC61619A1FD70F02003D6665 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		EC61619C1FD711BB003D6665 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		ECB0896F206A4DEA00D40BBE /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		ECB08973206A4E4000D40BBE /* FuturaPTLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTLight.otf; path = Fonts/FuturaPTLight.otf; sourceTree = "<group>"; };
+		ECB08974206A4E4000D40BBE /* FuturaPTMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTMedium.otf; path = Fonts/FuturaPTMedium.otf; sourceTree = "<group>"; };
+		ECB08975206A4E4000D40BBE /* FuturaPTCondBookOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondBookOblique.otf; path = Fonts/FuturaPTCondBookOblique.otf; sourceTree = "<group>"; };
+		ECB08976206A4E4100D40BBE /* FuturaPTCondBoldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondBoldOblique.otf; path = Fonts/FuturaPTCondBoldOblique.otf; sourceTree = "<group>"; };
+		ECB08977206A4E4100D40BBE /* FuturaPTBoldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBoldOblique.otf; path = Fonts/FuturaPTBoldOblique.otf; sourceTree = "<group>"; };
+		ECB08978206A4E4100D40BBE /* FuturaPTCondMediumOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondMediumOblique.otf; path = Fonts/FuturaPTCondMediumOblique.otf; sourceTree = "<group>"; };
+		ECB08979206A4E4100D40BBE /* FuturaPTDemi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTDemi.otf; path = Fonts/FuturaPTDemi.otf; sourceTree = "<group>"; };
+		ECB0897A206A4E4100D40BBE /* FuturaPTLightOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTLightOblique.otf; path = Fonts/FuturaPTLightOblique.otf; sourceTree = "<group>"; };
+		ECB0897B206A4E4100D40BBE /* FuturaPTCondMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondMedium.otf; path = Fonts/FuturaPTCondMedium.otf; sourceTree = "<group>"; };
+		ECB0897C206A4E4100D40BBE /* FuturaPTBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBook.otf; path = Fonts/FuturaPTBook.otf; sourceTree = "<group>"; };
+		ECB0897D206A4E4100D40BBE /* FuturaPTCondBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondBold.otf; path = Fonts/FuturaPTCondBold.otf; sourceTree = "<group>"; };
+		ECB0897E206A4E4100D40BBE /* FuturaPTCondExtraBoldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondExtraBoldOblique.otf; path = Fonts/FuturaPTCondExtraBoldOblique.otf; sourceTree = "<group>"; };
+		ECB0897F206A4E4100D40BBE /* FuturaPTCondExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondExtraBold.otf; path = Fonts/FuturaPTCondExtraBold.otf; sourceTree = "<group>"; };
+		ECB08980206A4E4100D40BBE /* FuturaPTCondBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTCondBook.otf; path = Fonts/FuturaPTCondBook.otf; sourceTree = "<group>"; };
+		ECB08981206A4E4100D40BBE /* FuturaPTBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBold.otf; path = Fonts/FuturaPTBold.otf; sourceTree = "<group>"; };
+		ECB08982206A4E4100D40BBE /* FuturaPTExtraBoldOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTExtraBoldOblique.otf; path = Fonts/FuturaPTExtraBoldOblique.otf; sourceTree = "<group>"; };
+		ECB08983206A4E4100D40BBE /* FuturaPTMediumOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTMediumOblique.otf; path = Fonts/FuturaPTMediumOblique.otf; sourceTree = "<group>"; };
+		ECB08984206A4E4100D40BBE /* FuturaPTExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTExtraBold.otf; path = Fonts/FuturaPTExtraBold.otf; sourceTree = "<group>"; };
+		ECB08985206A4E4100D40BBE /* FuturaPTBookOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTBookOblique.otf; path = Fonts/FuturaPTBookOblique.otf; sourceTree = "<group>"; };
+		ECB08986206A4E4100D40BBE /* FuturaPTDemiOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTDemiOblique.otf; path = Fonts/FuturaPTDemiOblique.otf; sourceTree = "<group>"; };
+		ECB08987206A4E4200D40BBE /* FuturaPTHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTHeavy.otf; path = Fonts/FuturaPTHeavy.otf; sourceTree = "<group>"; };
+		ECB08988206A4E4200D40BBE /* FuturaPTHeavyOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaPTHeavyOblique.otf; path = Fonts/FuturaPTHeavyOblique.otf; sourceTree = "<group>"; };
 		ECCC01191FFBBE12004D20F3 /* PopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
 		ECCC011B1FFCC383004D20F3 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
@@ -149,14 +149,14 @@
 			isa = PBXGroup;
 			children = (
 				EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */,
-				EC6161871FD6DFF8003D6665 /* Configurations.swift */,
+				ECB0896F206A4DEA00D40BBE /* Configurations.swift */,
 				ECE0C46320627A81007FB15B /* Constants.swift */,
 				EC6161501FD6C149003D6665 /* Controllers */,
 				EC6161921FD70A15003D6665 /* Models */,
 				EC6161991FD70EE1003D6665 /* Views */,
 				EC6161891FD6E047003D6665 /* Services */,
 				EC6161531FD6C38C003D6665 /* Toolbox */,
-				EC6161581FD6C884003D6665 /* Fonts */,
+				ECB08972206A4E3300D40BBE /* Fonts */,
 				EC6161451FD6B9D1003D6665 /* Assets.xcassets */,
 				EC6161471FD6B9D1003D6665 /* LaunchScreen.storyboard */,
 				EC61614A1FD6B9D1003D6665 /* Info.plist */,
@@ -191,35 +191,6 @@
 			path = Toolbox;
 			sourceTree = "<group>";
 		};
-		EC6161581FD6C884003D6665 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				EC61616D1FD6C8A5003D6665 /* FuturaPTBold.otf */,
-				EC6161591FD6C8A4003D6665 /* FuturaPTBoldOblique.otf */,
-				EC61616E1FD6C8A5003D6665 /* FuturaPTBook.otf */,
-				EC6161691FD6C8A5003D6665 /* FuturaPTBookOblique.otf */,
-				EC61615C1FD6C8A4003D6665 /* FuturaPTCondBold.otf */,
-				EC6161631FD6C8A5003D6665 /* FuturaPTCondBoldOblique.otf */,
-				EC6161601FD6C8A4003D6665 /* FuturaPTCondBook.otf */,
-				EC6161611FD6C8A4003D6665 /* FuturaPTCondBookOblique.otf */,
-				EC61616A1FD6C8A5003D6665 /* FuturaPTCondExtraBold.otf */,
-				EC61615D1FD6C8A4003D6665 /* FuturaPTCondExtraBoldOblique.otf */,
-				EC61615E1FD6C8A4003D6665 /* FuturaPTCondMedium.otf */,
-				EC6161651FD6C8A5003D6665 /* FuturaPTCondMediumOblique.otf */,
-				EC61615A1FD6C8A4003D6665 /* FuturaPTDemi.otf */,
-				EC6161661FD6C8A5003D6665 /* FuturaPTDemiOblique.otf */,
-				EC6161621FD6C8A4003D6665 /* FuturaPTExtraBold.otf */,
-				EC61615B1FD6C8A4003D6665 /* FuturaPTExtraBoldOblique.otf */,
-				EC61615F1FD6C8A4003D6665 /* FuturaPTHeavy.otf */,
-				EC61616B1FD6C8A5003D6665 /* FuturaPTHeavyOblique.otf */,
-				EC6161671FD6C8A5003D6665 /* FuturaPTLight.otf */,
-				EC6161681FD6C8A5003D6665 /* FuturaPTLightOblique.otf */,
-				EC6161641FD6C8A5003D6665 /* FuturaPTMedium.otf */,
-				EC61616C1FD6C8A5003D6665 /* FuturaPTMediumOblique.otf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		EC6161891FD6E047003D6665 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +222,35 @@
 				ECCC011D1FFD19BF004D20F3 /* FieldCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		ECB08972206A4E3300D40BBE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ECB08981206A4E4100D40BBE /* FuturaPTBold.otf */,
+				ECB08977206A4E4100D40BBE /* FuturaPTBoldOblique.otf */,
+				ECB0897C206A4E4100D40BBE /* FuturaPTBook.otf */,
+				ECB08985206A4E4100D40BBE /* FuturaPTBookOblique.otf */,
+				ECB0897D206A4E4100D40BBE /* FuturaPTCondBold.otf */,
+				ECB08976206A4E4100D40BBE /* FuturaPTCondBoldOblique.otf */,
+				ECB08980206A4E4100D40BBE /* FuturaPTCondBook.otf */,
+				ECB08975206A4E4000D40BBE /* FuturaPTCondBookOblique.otf */,
+				ECB0897F206A4E4100D40BBE /* FuturaPTCondExtraBold.otf */,
+				ECB0897E206A4E4100D40BBE /* FuturaPTCondExtraBoldOblique.otf */,
+				ECB0897B206A4E4100D40BBE /* FuturaPTCondMedium.otf */,
+				ECB08978206A4E4100D40BBE /* FuturaPTCondMediumOblique.otf */,
+				ECB08979206A4E4100D40BBE /* FuturaPTDemi.otf */,
+				ECB08986206A4E4100D40BBE /* FuturaPTDemiOblique.otf */,
+				ECB08984206A4E4100D40BBE /* FuturaPTExtraBold.otf */,
+				ECB08982206A4E4100D40BBE /* FuturaPTExtraBoldOblique.otf */,
+				ECB08987206A4E4200D40BBE /* FuturaPTHeavy.otf */,
+				ECB08988206A4E4200D40BBE /* FuturaPTHeavyOblique.otf */,
+				ECB08973206A4E4000D40BBE /* FuturaPTLight.otf */,
+				ECB0897A206A4E4100D40BBE /* FuturaPTLightOblique.otf */,
+				ECB08974206A4E4000D40BBE /* FuturaPTMedium.otf */,
+				ECB08983206A4E4100D40BBE /* FuturaPTMediumOblique.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,30 +312,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6161811FD6C8A6003D6665 /* FuturaPTHeavyOblique.otf in Resources */,
-				EC61616F1FD6C8A5003D6665 /* FuturaPTBoldOblique.otf in Resources */,
-				EC6161721FD6C8A5003D6665 /* FuturaPTCondBold.otf in Resources */,
-				EC6161701FD6C8A5003D6665 /* FuturaPTDemi.otf in Resources */,
-				EC6161711FD6C8A5003D6665 /* FuturaPTExtraBoldOblique.otf in Resources */,
-				EC61617F1FD6C8A6003D6665 /* FuturaPTBookOblique.otf in Resources */,
+				ECB0899E206A4E4200D40BBE /* FuturaPTHeavyOblique.otf in Resources */,
+				ECB0899A206A4E4200D40BBE /* FuturaPTExtraBold.otf in Resources */,
+				ECB0899B206A4E4200D40BBE /* FuturaPTBookOblique.otf in Resources */,
+				ECB08991206A4E4200D40BBE /* FuturaPTCondMedium.otf in Resources */,
+				ECB08989206A4E4200D40BBE /* FuturaPTLight.otf in Resources */,
+				ECB08990206A4E4200D40BBE /* FuturaPTLightOblique.otf in Resources */,
+				ECB08995206A4E4200D40BBE /* FuturaPTCondExtraBold.otf in Resources */,
+				ECB08997206A4E4200D40BBE /* FuturaPTBold.otf in Resources */,
+				ECB0899C206A4E4200D40BBE /* FuturaPTDemiOblique.otf in Resources */,
+				ECB0898F206A4E4200D40BBE /* FuturaPTDemi.otf in Resources */,
+				ECB08996206A4E4200D40BBE /* FuturaPTCondBook.otf in Resources */,
+				ECB0898A206A4E4200D40BBE /* FuturaPTMedium.otf in Resources */,
+				ECB0899D206A4E4200D40BBE /* FuturaPTHeavy.otf in Resources */,
 				EC6161491FD6B9D1003D6665 /* LaunchScreen.storyboard in Resources */,
-				EC6161821FD6C8A6003D6665 /* FuturaPTMediumOblique.otf in Resources */,
-				EC61617E1FD6C8A6003D6665 /* FuturaPTLightOblique.otf in Resources */,
-				EC6161771FD6C8A6003D6665 /* FuturaPTCondBookOblique.otf in Resources */,
-				EC6161831FD6C8A6003D6665 /* FuturaPTBold.otf in Resources */,
-				EC6161801FD6C8A6003D6665 /* FuturaPTCondExtraBold.otf in Resources */,
-				EC6161741FD6C8A5003D6665 /* FuturaPTCondMedium.otf in Resources */,
-				EC6161731FD6C8A5003D6665 /* FuturaPTCondExtraBoldOblique.otf in Resources */,
-				EC6161781FD6C8A6003D6665 /* FuturaPTExtraBold.otf in Resources */,
-				EC61617C1FD6C8A6003D6665 /* FuturaPTDemiOblique.otf in Resources */,
-				EC61617A1FD6C8A6003D6665 /* FuturaPTMedium.otf in Resources */,
+				ECB08993206A4E4200D40BBE /* FuturaPTCondBold.otf in Resources */,
 				EC6161461FD6B9D1003D6665 /* Assets.xcassets in Resources */,
-				EC61617B1FD6C8A6003D6665 /* FuturaPTCondMediumOblique.otf in Resources */,
-				EC6161791FD6C8A6003D6665 /* FuturaPTCondBoldOblique.otf in Resources */,
-				EC61617D1FD6C8A6003D6665 /* FuturaPTLight.otf in Resources */,
-				EC6161841FD6C8A6003D6665 /* FuturaPTBook.otf in Resources */,
-				EC6161751FD6C8A6003D6665 /* FuturaPTHeavy.otf in Resources */,
-				EC6161761FD6C8A6003D6665 /* FuturaPTCondBook.otf in Resources */,
+				ECB0898B206A4E4200D40BBE /* FuturaPTCondBookOblique.otf in Resources */,
+				ECB08999206A4E4200D40BBE /* FuturaPTMediumOblique.otf in Resources */,
+				ECB08998206A4E4200D40BBE /* FuturaPTExtraBoldOblique.otf in Resources */,
+				ECB0898E206A4E4200D40BBE /* FuturaPTCondMediumOblique.otf in Resources */,
+				ECB08992206A4E4200D40BBE /* FuturaPTBook.otf in Resources */,
+				ECB0898C206A4E4200D40BBE /* FuturaPTCondBoldOblique.otf in Resources */,
+				ECB08994206A4E4200D40BBE /* FuturaPTCondExtraBoldOblique.otf in Resources */,
+				ECB0898D206A4E4200D40BBE /* FuturaPTBoldOblique.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +346,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6161881FD6DFF8003D6665 /* Configurations.swift in Sources */,
 				EC61619D1FD711BB003D6665 /* ImageService.swift in Sources */,
 				EC6161941FD70A27003D6665 /* Topic.swift in Sources */,
 				EC6161411FD6B9D1003D6665 /* TopicsController.swift in Sources */,
@@ -371,6 +370,7 @@
 				EC61619B1FD70F02003D6665 /* TopicCell.swift in Sources */,
 				EC20A45F1FE25C6B00146930 /* Message.swift in Sources */,
 				EC61618B1FD6E058003D6665 /* LoginService.swift in Sources */,
+				ECB08970206A4DEA00D40BBE /* Configurations.swift in Sources */,
 				EC20A45B1FE252B700146930 /* MessagesController.swift in Sources */,
 				ECCC011C1FFCC383004D20F3 /* PopupView.swift in Sources */,
 				ECE0C46420627A81007FB15B /* Constants.swift in Sources */,
