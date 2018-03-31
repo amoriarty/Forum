@@ -41,6 +41,7 @@ final class MessagesController: UITableViewController, PopupDelegate {
         navigationItem.rightBarButtonItem = addButton
         
         addController.delegate = self
+        editController.delegate = self
     }
     
     // MARK:- Controller logics
@@ -145,5 +146,9 @@ final class MessagesController: UITableViewController, PopupDelegate {
     
     func add(_ message: Message) {
         setMessages(messages + [message])
+    }
+    
+    func refresh() {
+        handleRefresh()
     }
 }

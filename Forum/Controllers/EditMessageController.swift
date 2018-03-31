@@ -30,7 +30,10 @@ final class EditMessageController: PopupController {
         guard let cell = popupView.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? FieldCell else { return }
         guard let content = cell.textView.text, content.count > 0 else { return }
         guard let message = message else { return }
-        APIService.shared.update(message: message.id, with: content)
+        APIService.shared.update(message: message.id, with: content) {
+            self.delegate?.refresh()
+        }
+        
         cancel()
     }
 }

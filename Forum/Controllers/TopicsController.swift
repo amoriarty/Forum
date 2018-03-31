@@ -164,5 +164,9 @@ class TopicsController: UITableViewController, LoginDelegate, PopupDelegate {
     }
     
     func add(_ message: Message) {}
+    
+    func refresh() {
+        handleRefresh()
+    }
 }
 

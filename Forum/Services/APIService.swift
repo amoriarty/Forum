@@ -92,8 +92,24 @@ class APIService {
         }.resume()
     }
     
-    func update(message: Int, with content: String) {
-        // TODO: Implement PATCH message
+    func update(message: Int, with content: String, completion: @escaping () -> Void) {
+        guard let token = LoginService.shared.token else { return }
+        guard let url = URL(string: "\(API_URL)/messages/\(message)") else { return }
+        var request = URLRequest(url: url)
+        let body = PatchableMessage(content: content)
+        
+        // Try to encode
+        guard let encoded = try? JSONEncoder().encode(body) else { return }
+        request.httpMethod = "PATCH"
+        request.httpBody = encoded
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { _, _, error in
+            if let error = error {
+                print(error)
+            }
+            completion()
+        }.resume()
     }
     
     func remove(topic: Int) {

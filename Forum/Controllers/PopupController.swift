@@ -11,6 +11,7 @@ import UIKit
 protocol PopupDelegate: class {
     func add(_ topic: Topic)
     func add(_ message: Message)
+    func refresh()
 }
 
 class PopupController: UIViewController, UITableViewDelegate, UITableViewDataSource {

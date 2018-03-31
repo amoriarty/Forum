@@ -45,3 +45,15 @@ struct SendableMessage: Encodable {
         message = Submessage(authorId: author, content: content)
     }
 }
+
+struct PatchableMessage: Encodable {
+    let message: PatchableSubmessage
+    
+    struct PatchableSubmessage: Encodable {
+        let content: String
+    }
+    
+    init(content: String) {
+        message = PatchableSubmessage(content: content)
+    }
+}
