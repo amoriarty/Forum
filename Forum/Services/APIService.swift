@@ -104,19 +104,32 @@ class APIService {
         request.httpBody = encoded
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        URLSession.shared.dataTask(with: request) { _, _, error in
-            if let error = error {
-                print(error)
-            }
+        URLSession.shared.dataTask(with: request) { _, _, _ in
             completion()
         }.resume()
     }
     
     func remove(topic: Int) {
-        // TODO: Implement DELETE Topic
+        guard let token = LoginService.shared.token else { return }
+        guard let url = URL(string: "\(topicUrl)/\(topic)") else { return }
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "DELETE"
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { _, _, _ in
+        }.resume()
     }
     
     func remove(message: Int) {
-        // TODO: Implement DELETE message
+        guard let token = LoginService.shared.token else { return }
+        guard let url = URL(string: "\(API_URL)/messages/\(message)") else { return }
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "DELETE"
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { _, _, _ in
+        }.resume()
     }
 }
