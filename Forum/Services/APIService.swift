@@ -45,8 +45,19 @@ class APIService {
         DataService.shared.get(request: request, for: [Message].self, completion: completion)
     }
     
-    func add(topic name: String, message: String) {
-        // TODO: Implement POST topic to API.
+    func add(topic name: String, message: String, kind: SendableTopic.TopicKind = .normal, completion: @escaping (Topic?) -> Void) {
+        guard let token = LoginService.shared.token else { return }
+        guard let url = URL(string: "\(API_URL)/topics") else { return }
+        var request = URLRequest(url: url)
+        let body = SendableTopic(name: name, content: message, kind: kind)
+        
+        // Try to encode
+        guard let encoded = try? JSONEncoder().encode(body) else { return }
+        request.httpMethod = "POST"
+        request.httpBody = encoded
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        DataService.shared.get(request: request, for: Topic.self, completion: completion)
     }
     
     func add(message: String, to topic: Int) {

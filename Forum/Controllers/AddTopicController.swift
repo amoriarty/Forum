@@ -30,7 +30,10 @@ final class AddTopicController: PopupController {
         guard let messageCell = popupView.tableView.cellForRow(at: IndexPath(item: 1, section: 0)) as? FieldCell else { return }
         guard let topic = topicCell.textView.text, topic.count > 0, topic != "" else { return }
         guard let message = messageCell.textView.text, message.count > 0, message != "" else { return }
-        APIService.shared.add(topic: topic, message: message)
+        APIService.shared.add(topic: topic, message: message) { [unowned self] topic in
+            guard let topic = topic else { return }
+            self.delegate?.add(topic)
+        }
         cancel()
     }
 }

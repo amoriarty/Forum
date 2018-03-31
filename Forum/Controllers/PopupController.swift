@@ -9,7 +9,8 @@
 import UIKit
 
 protocol PopupDelegate: class {
-    func dismissPopup()
+//    func dismissPopup()
+    func add(_ topic: Topic)
 }
 
 class PopupController: UIViewController, UITableViewDelegate, UITableViewDataSource {

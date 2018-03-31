@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopicsController: UITableViewController, LoginDelegate {
+class TopicsController: UITableViewController, LoginDelegate, PopupDelegate {
     private let reuseId = "reuseId"
     private let loginController = LoginController()
     private let messagesController = MessagesController()
@@ -26,6 +26,7 @@ class TopicsController: UITableViewController, LoginDelegate {
         setupNavBar()
         handleLogout()
         LoginService.shared.delegate = self
+        addController.delegate = self
     }
     
     // MARK:- Setups
@@ -153,6 +154,11 @@ class TopicsController: UITableViewController, LoginDelegate {
     func didLogin() {
         navigationController?.dismiss(animated: true, completion: nil)
         handleRefresh()
+    }
+    
+    // MARK:- Popup Delegate
+    func add(_ topic: Topic) {
+        topics = [topic] + topics
     }
 }
 

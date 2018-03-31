@@ -68,6 +68,7 @@
 		EC20A45E1FE25C6B00146930 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		EC20A4601FE25E1300146930 /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
 		EC20A4621FE3A89F00146930 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
+		EC522BFC206F81D3007FE890 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EC61613B1FD6B9D1003D6665 /* Forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC61613E1FD6B9D1003D6665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6161401FD6B9D1003D6665 /* TopicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsController.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		EC6161321FD6B9D1003D6665 = {
 			isa = PBXGroup;
 			children = (
+				EC522BFC206F81D3007FE890 /* README.md */,
 				EC61613D1FD6B9D1003D6665 /* Forum */,
 				EC61613C1FD6B9D1003D6665 /* Products */,
 			);

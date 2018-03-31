@@ -21,7 +21,7 @@ struct TokenResponse: Decodable {
 
 class LoginService {
     static let shared = LoginService()
-    private let authUrl = "https://api.intra.42.fr/oauth/authorize?client_id=\(API_UID)&redirect_uri=forum%3A%2F%2Fauthorize&response_type=code"
+    private let authUrl = "https://api.intra.42.fr/oauth/authorize?client_id=\(API_UID)&redirect_uri=forum%3A%2F%2Fauthorize&response_type=code&scope=public%20forum"
     private let tokenUrl = "https://api.intra.42.fr/oauth/token"
     private var authorization: String?
     weak var delegate: LoginDelegate?
