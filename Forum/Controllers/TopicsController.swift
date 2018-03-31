@@ -114,7 +114,9 @@ class TopicsController: UITableViewController, LoginDelegate, PopupDelegate {
             let save = UIAlertAction(title: "Save", style: .default, handler: { _ in
                 guard let textField = controller.textFields?.first else { return }
                 guard let text = textField.text, text.count > 0 else { return }
-                APIService.shared.update(topic: topic.id, with: text)
+                APIService.shared.update(topic: topic.id, with: text) { [unowned self] in
+                    self.handleRefresh()
+                }
             })
             
             controller.title = "Edit Topic"

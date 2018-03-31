@@ -78,3 +78,14 @@ struct SendableTopic: Encodable {
     }
 }
 
+struct PatchableTopic: Encodable {
+    let topic: PatchableSubtopic
+    
+    struct PatchableSubtopic: Encodable {
+        let name: String
+    }
+    
+    init(name: String) {
+        topic = PatchableSubtopic(name: name)
+    }
+}

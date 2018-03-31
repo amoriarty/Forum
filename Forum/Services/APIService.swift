@@ -75,8 +75,21 @@ class APIService {
         DataService.shared.get(request: request, for: Message.self, completion: completion)
     }
     
-    func update(topic: Int, with name: String) {
-        // TODO: Implement PATCH topic
+    func update(topic: Int, with name: String, completion: @escaping () -> Void) {
+        guard let token = LoginService.shared.token else { return }
+        guard let url = URL(string: "\(topicUrl)/\(topic)") else { return }
+        var request = URLRequest(url: url)
+        let body = PatchableTopic(name: name)
+        
+        // Try to encode
+        guard let encoded = try? JSONEncoder().encode(body) else { return }
+        request.httpMethod = "PATCH"
+        request.httpBody = encoded
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { _, _, _ in
+            completion()
+        }.resume()
     }
     
     func update(message: Int, with content: String) {
