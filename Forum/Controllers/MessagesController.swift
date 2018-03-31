@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MessagesController: UITableViewController {
+final class MessagesController: UITableViewController, PopupDelegate {
     private let reuseId = "reusId"
     private let addController = AddMessageController()
     private let editController = EditMessageController()
@@ -39,6 +39,8 @@ class MessagesController: UITableViewController {
         /* Adding add button */
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAdd))
         navigationItem.rightBarButtonItem = addButton
+        
+        addController.delegate = self
     }
     
     // MARK:- Controller logics
@@ -136,5 +138,12 @@ class MessagesController: UITableViewController {
         }
         
         return UISwipeActionsConfiguration(actions: [delete, edit])
+    }
+    
+    // MARK:- Popup Delegate
+    func add(_ topic: Topic) {}
+    
+    func add(_ message: Message) {
+        setMessages(messages + [message])
     }
 }

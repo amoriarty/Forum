@@ -27,3 +27,21 @@ struct Message: Decodable {
         return left.id == right.id
     }
 }
+
+struct SendableMessage: Encodable {
+    let message: Submessage
+    
+    struct Submessage: Encodable {
+        let authorId: Int
+        let content: String
+        
+        private enum CodingKeys: String, CodingKey {
+            case content
+            case authorId = "author_id"
+        }
+    }
+    
+    init(author: Int, content: String) {
+        message = Submessage(authorId: author, content: content)
+    }
+}

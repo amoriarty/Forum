@@ -160,5 +160,7 @@ class TopicsController: UITableViewController, LoginDelegate, PopupDelegate {
     func add(_ topic: Topic) {
         topics = [topic] + topics
     }
+    
+    func add(_ message: Message) {}
 }
 

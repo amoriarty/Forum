@@ -23,7 +23,11 @@ final class AddMessageController: PopupController {
         guard let field = popupView.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? FieldCell else { return }
         guard let message = field.textView.text, message.count > 0, message != "" else { return }
         guard let topic = topic else { return }
-        APIService.shared.add(message: message, to: topic.id)
+        APIService.shared.add(message: message, to: topic.id) { response in
+            guard let response = response else { return }
+            self.delegate?.add(response)
+        }
+        
         cancel()
     }
 }

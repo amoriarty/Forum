@@ -20,7 +20,7 @@ class APIService {
     
     func getUser(_ user: String = "me", completion: @escaping (Student?) -> Void) {
         guard let token = LoginService.shared.token else { return }
-        guard let url = URL(string: "\(userUrl)/\(user)") else { return }
+        guard let url = URL(string: user == "me" ? "\(API_URL)/me" : "\(userUrl)/\(user)") else { return }
         var request = URLRequest(url: url)
         
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -47,7 +47,7 @@ class APIService {
     
     func add(topic name: String, message: String, kind: SendableTopic.TopicKind = .normal, completion: @escaping (Topic?) -> Void) {
         guard let token = LoginService.shared.token else { return }
-        guard let url = URL(string: "\(API_URL)/topics") else { return }
+        guard let url = URL(string: topicUrl) else { return }
         var request = URLRequest(url: url)
         let body = SendableTopic(name: name, content: message, kind: kind)
         
@@ -60,8 +60,19 @@ class APIService {
         DataService.shared.get(request: request, for: Topic.self, completion: completion)
     }
     
-    func add(message: String, to topic: Int) {
-        // TODO: Implement POST message to API
+    func add(message: String, to topic: Int, completion: @escaping (Message?) -> Void) {
+        guard let token = LoginService.shared.token else { return }
+        guard let url = URL(string: "\(API_URL)/topics/\(topic)/messages") else { return }
+        var request = URLRequest(url: url)
+        let body = SendableMessage(author: LoginService.shared.user?.id ?? 0, content: message)
+        
+        // Try to encode
+        guard let encoded = try? JSONEncoder().encode(body) else { return }
+        request.httpMethod = "POST"
+        request.httpBody = encoded
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        DataService.shared.get(request: request, for: Message.self, completion: completion)
     }
     
     func update(topic: Int, with name: String) {
